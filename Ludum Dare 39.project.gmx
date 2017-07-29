@@ -88,10 +88,12 @@
       </scripts>
       <script>scripts\scr_finishcurrentcard.gml</script>
       <script>scripts\scr_deactivatecard.gml</script>
+      <script>scripts\scr_activatecard.gml</script>
     </scripts>
     <scripts name="cardmanager">
       <scripts name="internal">
         <script>scripts\scr_cardmanager_init.gml</script>
+        <script>scripts\scr_cardmanager_update.gml</script>
       </scripts>
     </scripts>
     <scripts name="cardoption">
@@ -126,7 +128,6 @@
       <object>objects\obj_cardoption</object>
     </objects>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\rm_initialize</room>
     <room>rooms\rm_guitest</room>

@@ -7,6 +7,10 @@ vspeed/=1.4;
 textObject.x = x;
 textObject.y = y - 128;
 
+if (scr_draw_text_is_finished(textObject)) {
+    scr_activatecard(self);
+}
+
 for(var i=0;i<ds_list_size(options);i++) {
     var option = ds_list_find_value(options, i);
     

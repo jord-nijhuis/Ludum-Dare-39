@@ -11,7 +11,7 @@ var term_end_day = ds_map_find_value(days, "term_end_day");;
 ds_map_destroy(days);
 
 // We cannot skip the election
-if(scr_get_stage(day) == "election" && scr_get_stage(day + amount) == "president_elect")
+if(scr_get_stage(day) == "election" && scr_get_stage(day + amount) != "election_day")
 {
     return election_day;
 }

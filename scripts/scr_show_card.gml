@@ -14,5 +14,7 @@ var choices = ds_map_find_value(argument0, "choices");
 var options = scr_card_createoptionsfromchoices(choices);
 newCard.options = options;
 
+ds_list_add(global.used_dialogue, argument0);
+
 scr_setcurrentcard(newCard);
 return newCard;

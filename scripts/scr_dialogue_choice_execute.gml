@@ -7,7 +7,7 @@ var choice = argument0;
 var money = ds_map_find_value(choice, "money");
 var _power = ds_map_find_value(choice, "power");
 var popularity = ds_map_find_value(choice, "populairity");
-var day = ds_map_find_value(day, "day");
+var day = ds_map_find_value(choice, "day");
 var triggers = ds_map_find_value(choice, "triggers");
 
 

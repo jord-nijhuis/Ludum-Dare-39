@@ -16,13 +16,16 @@ draw_text(room_width / 2, 64, "Power");
 // Money:
 
 draw_set_halign(fa_left);
-if (self.tr_money_display>=0)
-draw_set_colour(c_black);
-else
-draw_set_colour(c_red);
+
+if (self.tr_money_display>=0){
+    draw_set_colour(c_black);
+}else{
+    draw_set_colour(c_red);
+}
 
 draw_text(32, 64, "Wealth: $"+string(self.tr_money_display));
 
+draw_set_colour(c_black);
 // Stage
 draw_text(32, 80, "Day: "+string(global.day));
 draw_text(32, 96, "Stage: "+scr_get_readable_stage(scr_get_stage(global.day)));
