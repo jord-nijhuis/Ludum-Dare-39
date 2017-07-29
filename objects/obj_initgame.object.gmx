@@ -28,6 +28,11 @@
             <string>global.tr_money = 0;
 global.tr_power = 50;
 global.tr_popularity = 50;
+
+global.dialogue = scr_dialogue_load();
+global.used_dialogue = ds_list_create();
+global.triggers = ds_list_create();
+global.stage = "election";
 </string>
           </argument>
         </arguments>

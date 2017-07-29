@@ -1,10 +1,8 @@
-// scr_createcardoption(text, powerIncrease, wealthIncrease, popularityIncrease);
+// scr_createcardoption(text, choiceData);
 
 var newOption = instance_create(0,0, obj_cardoption);
 
-newOption.text = argument0;
-newOption.powerIncrease = argument1;
-newOption.wealthIncrease = argument2;
-newOption.popularityIncrease = argument3;
+newOption.text = ds_map_find_value(argument0, "text");
+newOption.data = argument0;
 
 return newOption;
