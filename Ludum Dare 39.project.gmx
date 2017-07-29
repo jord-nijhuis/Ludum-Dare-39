@@ -8,6 +8,19 @@
   <sprites name="sprites"/>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <scripts name="draw_text">
+      <script>scripts\scr_draw_text.gml</script>
+      <script>scripts\scr_draw_text_force.gml</script>
+      <script>scripts\scr_draw_text_pause.gml</script>
+      <script>scripts\scr_draw_text_resume.gml</script>
+    </scripts>
+  </scripts>
+  <objects name="objects">
+    <objects name="scr">
+      <object>objects\obj_scr_draw_text</object>
+    </objects>
+  </objects>
   <rooms name="rooms"/>
   <help>
     <rtf>help.rtf</rtf>
