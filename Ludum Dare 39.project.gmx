@@ -45,6 +45,7 @@
       <script>scripts\scr_draw_text_force.gml</script>
       <script>scripts\scr_draw_text_pause.gml</script>
       <script>scripts\scr_draw_text_resume.gml</script>
+      <script>scripts\scr_draw_text_is_finished.gml</script>
     </scripts>
     <scripts name="gui">
       <scripts name="internal">
