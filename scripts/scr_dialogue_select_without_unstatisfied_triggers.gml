@@ -19,7 +19,7 @@ for(var dialogue_i = 0; dialogue_i < ds_list_size(dialogue); dialogue_i++)
     // There are triggers specified
     if(!is_undefined(dialouge_triggers))
     {
-        for(var trigger_i = 0; ds_list_size(dialouge_triggers); trigger_i++)
+        for(var trigger_i = 0; trigger_i < ds_list_size(dialouge_triggers); trigger_i++)
         {
             var trigger = ds_list_find_value(dialouge_triggers, trigger_i);
             

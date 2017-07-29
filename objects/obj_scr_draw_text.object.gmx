@@ -35,7 +35,7 @@ max_x = 0;
 line_seperator = 20;
 
 //The amount of times it takes between drawing two letters
-time = 1;
+time = 3;
 
 // The text color
 color = c_black;

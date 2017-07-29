@@ -25,8 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>active = true;
+            <string>active = false;
 hover = false;
+xScaleSpeed = 0;
+yScaleSpeed = 0;
+image_xscale = 0;
+image_yscale = 0;
+
+choice = undefined;
 </string>
           </argument>
         </arguments>
@@ -137,7 +143,8 @@ hover = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (active) {
+            <string>if (active &amp;&amp; activateTimer &lt;= 0) {
+    scr_dialogue_choice_execute(choice);
     scr_finishcurrentcard();
 }
 </string>
@@ -146,20 +153,6 @@ hover = false;
       </action>
     </event>
     <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>500</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring>draw_self();</codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
       <action>
         <libid>1</libid>
         <id>601</id>

@@ -3,4 +3,7 @@ if (scr_getcurrentcard()!=0) {
     scr_deactivatecard(currentCard);
     currentCard.yTarget = -room_height/2;
     scr_setcurrentcard(0);
+    with(obj_cardmanager) {
+        cooldown = 60;
+    }
 }
