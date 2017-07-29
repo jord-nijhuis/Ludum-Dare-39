@@ -101,6 +101,12 @@
         <script>scripts\scr_cardoption_update.gml</script>
       </scripts>
     </scripts>
+    <scripts name="stage">
+      <script>scripts\scr_get_stage.gml</script>
+      <script>scripts\scr_get_important_days.gml</script>
+      <script>scripts\scr_add_days.gml</script>
+      <script>scripts\scr_get_readable_stage.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_gui</font>
@@ -120,6 +126,7 @@
       <object>objects\obj_cardoption</object>
     </objects>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\rm_initialize</room>
     <room>rooms\rm_guitest</room>

@@ -23,6 +23,10 @@ draw_set_colour(c_red);
 
 draw_text(32, 64, "Wealth: $"+string(self.tr_money_display));
 
+// Stage
+draw_text(32, 80, "Day: "+string(global.day));
+draw_text(32, 96, "Stage: "+scr_get_readable_stage(scr_get_stage(global.day)));
+
 // Popularity
 draw_sprite_ext(spr_gui_popularity, 0, room_width - 150, 64, 1, 1, 0, c_white, 1);
 draw_sprite_ext(spr_gui_popularity, 1, room_width - 150, 64, 1, 1, 0, c_white, global.tr_popularity / 100.0);

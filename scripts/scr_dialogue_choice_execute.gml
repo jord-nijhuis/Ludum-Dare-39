@@ -7,6 +7,7 @@ var choice = argument0;
 var money = ds_map_find_value(choice, "money");
 var _power = ds_map_find_value(choice, "power");
 var popularity = ds_map_find_value(choice, "populairity");
+var day = ds_map_find_value(day, "day");
 var triggers = ds_map_find_value(choice, "triggers");
 
 
@@ -26,6 +27,13 @@ if(!is_undefined(popularity))
 {
     scr_popularity_increase(populairity);
 }
+
+if(is_undefined(day))
+{
+    day = 30000;
+}
+
+global.day = scr_add_days(global.day, day);
 
 if(!is_undefined(triggers))
 {
