@@ -1,40 +1,207 @@
-[
-	{
-		"text": "Mexicans are a big problem! What are we going to do?",
-		"stage": "election",
-		"choices": [
-			{
-				"text": "I'll have a meeting with the president of Mexico.",
-				"power": -5,
-			},
-			{
-				"text": "Build a wall",
-				"money": -20,
-				"triggers": [
-					"BUILD_WALL"
-				]
-			}
-		]
-	},
-
-	{
-		"text": "How are we going to pay for this wall?",
-		"stage": "election",
-		"requires_triggers" :
-		[
-			"BUILD_WALL"
-		],
-		"choices": [
-			{
-				"text": "We will get support from Russia",
-				"money": 500,
-				"power": -20,
-			},
-			{
-				"text": "We are not going to build it, are you stupid?",
-				"money": 20,
-				"popularity": -10
-			}
-		]
-	}
+[  
+{  
+      "id":"OBAMA_REVEALS",
+      "text":"Obama decides to respond to your twitter ramblings and publishes a copy of his birth certificate. There's nothing special on there.",
+      "stage":"election",
+      "choices":[  
+         {  
+            "text":"Low energy.",
+            "power": -3,
+            "popularity":-7
+         }
+      ]
+   },
+   {  
+      "id":"OBAMA_IGNORES",
+      "text":"Obama ignores your twitter rant.",
+      "stage":"election",
+      "choices":[  
+         {  
+            "text":"Call him a fake president.",
+            "power": 4,
+            "popularity":5
+         },
+         {  
+            "text":"Call him a muslim.",
+            "power": 3,
+            "popularity":6
+         }
+      ]
+   },
+   {  
+      "id":"CLINTONTWITTER",
+      "text":"Hillary Clinton is gaining more and more followers on twitter. What is your strategy?",
+      "stage":"election",
+      "choices":[  
+         {  
+            "text":"Arrange for her account to be locked down.",
+            "money":-5000,
+            "power": 2,
+            "popularity":6
+         },
+         {  
+            "text":"Go on a twittering spree and show her who is the real future president.",
+            "power": 1,
+            "popularity": 2,
+         },
+         {  
+            "text":"Twitter about how Obama should release his birth certificate to gain more followers.",
+            "popularity": 4,
+            "next_events": [  
+               {  
+                  "event":"OBAMA_REVEALS",
+                  "weight":1
+               },
+               {  
+                  "event":"OBAMA_IGNORES",
+                  "weight":1
+               }
+            ]
+         }
+      ]
+   },
+   {  
+      "id":"MEXICANS",
+      "text":"Mexicans are a big problem! What are we going to do?",
+      "stage":"election",
+      "choices":[  
+         {  
+            "text":"I'll have a meeting with the president of Mexico.",
+            "power":-5
+         },
+         {  
+            "text":"Build a wall",
+            "money":-20,
+            "triggers":[  
+               "BUILD_WALL"
+            ]
+         }
+      ]
+   },
+  {  
+      "id":"CLIMATECHANGE",
+      "text":"Climate change is getting worse. Of course, I am gonna...",
+      "stage":"election",
+      "choices":[  
+         {  
+            "text":"Work together with other countries to stop climate change",
+            "money": -10000,
+            "power": -8,
+            "popularity": 5
+         },
+         {  
+            "text":"Ignore that, and open up some more coal mines!",
+            "money":20000,
+            "power": 10,
+            "popularity": -7,
+            "triggers":[  
+               "DROUGHT"
+            ]
+         }
+      ]
+   },
+   {  
+      "id":"SEXTAPE",
+      "text":"Oh no! A sex tape with you peeing on some russian hooker has been leaked! What do you do?",
+      "stage":"election",
+      "choices":[  
+         {  
+            "text":"Send the FBI to destroy evidence.",
+            "money":-10000
+         },
+         {  
+            "text":"Assert dominance and claim ownership of the tape",
+            "money":-20,
+            "next_events":[  
+               {  
+                  "event":"SEXTAPE_HAPPY",
+                  "weight":1
+               },
+               {  
+                  "event":"SEXTAPE_SAD",
+                  "weight":1
+               }
+            ]
+         }
+      ]
+   },
+   {  
+      "id":"SEXTAPE_HAPPY",
+      "text":"The sextape is a big hit in CHINA. All profits go to your campaign.",
+      "stage":"special_event",
+      "choices":[  
+         {  
+            "text":"Nice!",
+            "money":10000
+         }
+      ]
+   },
+   {  
+      "id":"SEXTAPE_SAD",
+      "text":"Unfortunately, your image hasn't exactly improved after the sex tape leaked.",
+      "stage":"special_event",
+      "choices":[  
+         {  
+            "text":"Worst. Sextape. Ever.",
+            "power":-10,
+            "popularity":-20
+         }
+      ]
+   },
+   {  
+      "id":"WALLPROBLEM",
+      "text":"An angry group of citizens doesn't want to give up their backyard for the great big wall, so building has come to a stop.",
+      "stage":"president",
+      "requires_triggers":[  
+         "BUILD_WALL"
+      ],
+      "choices":[  
+         {  
+            "text":"Throw more money against it and hope they'll give up their land.",
+            "money":-10000,
+            "popularity":-15,
+            "power":10
+         },
+         {  
+            "text":"Leave a hole in the wall.",
+            "money":0,
+            "power":-5,
+            "popularity":5
+         }
+      ]
+   },
+   {  
+      "id":"WALLFINANCE",
+      "text":"How are we going to pay for this wall?",
+      "stage":"election",
+      "requires_triggers":[  
+         "BUILD_WALL"
+      ],
+      "choices":[  
+         {  
+            "text":"We will get support from Russia",
+            "money":50000,
+            "power":-20,
+            "popularity": -5
+         },
+         {  
+            "text":"Mexico will pay for the wall, of course!",
+            "money":25000,
+            "power":-10,
+            "popularity": 5
+         },
+         {  
+            "text":"The taxpayers will pay for this wall.",
+            "money":-50000,
+            "power":5,
+            "popularity": -15
+         },
+         {  
+            "text":"We are not going to build it, are you stupid?",
+            "money":20,
+            "popularity":-10,
+            "unset_triggers": ["BUILD_WALL"]
+         }
+      ]
+   }
 ]
