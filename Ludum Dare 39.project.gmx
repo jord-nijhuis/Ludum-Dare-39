@@ -30,7 +30,11 @@
       <sound>sound\snd_love_mexicans</sound>
       <sound>sound\snd_love_china</sound>
       <sound>sound\snd_wall</sound>
+      <sound>sound\snd_low_energy</sound>
     </sounds>
+    <sound>sound\snd_money</sound>
+    <sound>sound\snd_popularity_down</sound>
+    <sound>sound\snd_popularity_up</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="gui">
@@ -82,12 +86,9 @@
       <script>scripts\create_array.gml</script>
     </scripts>
     <scripts name="meters">
-      <script>scripts\scr_popularity_increase.gml</script>
-      <script>scripts\scr_popularity_decrease.gml</script>
-      <script>scripts\scr_power_increase.gml</script>
-      <script>scripts\scr_power_decrease.gml</script>
+      <script>scripts\scr_popularity_add.gml</script>
+      <script>scripts\scr_power_add.gml</script>
       <script>scripts\scr_money_add.gml</script>
-      <script>scripts\scr_money_subtract.gml</script>
     </scripts>
     <scripts name="card">
       <script>scripts\scr_show_card.gml</script>

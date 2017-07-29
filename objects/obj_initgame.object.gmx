@@ -25,7 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.tr_money = 0;
+            <string>if(!debug_mode)
+{
+    randomize();
+}else{
+    show_message("DEBUG");
+    random_set_seed("seed");
+}
+
+global.tr_money = 0;
 global.tr_power = 50;
 global.tr_popularity = 50;
 

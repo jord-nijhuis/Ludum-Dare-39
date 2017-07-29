@@ -22,6 +22,10 @@ ds_map_add(sounds, "wall", create_array(
     snd_wall
 ));
 
+// Low energy
+ds_map_add(sounds, "low_energy", create_array(
+    snd_low_energy
+));
 return sounds;
 
 
