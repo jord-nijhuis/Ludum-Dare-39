@@ -7,6 +7,6 @@ if (ds_list_size(dialogue)==0) {
     return undefined;
 }
 
-var index = floor(random(ds_list_size(dialogue)));
+var index = round(random(ds_list_size(dialogue) - 1));
 
 return ds_list_find_value(dialogue, index);

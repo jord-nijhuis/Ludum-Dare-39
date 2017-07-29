@@ -31,6 +31,7 @@ global.tr_popularity = 50;
 
 global.dialogue = scr_dialogue_load();
 global.used_dialogue = ds_list_create();
+global.used_choices = ds_list_create();
 global.triggers = ds_list_create();
 global.day = 0;
 </string>

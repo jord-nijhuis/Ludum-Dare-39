@@ -9,25 +9,30 @@ var _power = ds_map_find_value(choice, "power");
 var popularity = ds_map_find_value(choice, "populairity");
 var day = ds_map_find_value(choice, "day");
 var triggers = ds_map_find_value(choice, "triggers");
+var unset_triggers = ds_map_find_value(choice, "unset_triggers");
 
+// Add the choice we are executing to the used choices
+ds_list_add(global.used_choices, choice);
 
-ds_list_add(global.used_dialogue, choice);
-
+// Money
 if(!is_undefined(money))
 {
     scr_money_add(money);
 }
 
+// Power
 if(!is_undefined(_power))
 {
     scr_power_increase(_power);
 }
 
+// Popularity
 if(!is_undefined(popularity))
 {
     scr_popularity_increase(populairity);
 }
 
+// Day
 if(is_undefined(day))
 {
     day = 5;
@@ -35,7 +40,15 @@ if(is_undefined(day))
 
 global.day = scr_add_days(global.day, day);
 
+// Triggers
 if(!is_undefined(triggers))
 {
     global.triggers = ds_list_unique(ds_list_merge(global.triggers, triggers));
 }
+
+// Unset Triggers
+if(!is_undefined(unset_triggers))
+{
+    ds_list_delete_elements(global.triggers, unset_triggers);
+}
+

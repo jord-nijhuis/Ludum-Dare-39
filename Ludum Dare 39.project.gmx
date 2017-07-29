@@ -62,11 +62,14 @@
       <script>scripts\scr_dialogue_select_without_unstatisfied_triggers.gml</script>
       <script>scripts\scr_dialogue_choice_execute.gml</script>
       <script>scripts\scr_dialogue_select_next.gml</script>
+      <script>scripts\scr_dialogue_select_by_id.gml</script>
+      <script>scripts\scr_choose_next_event.gml</script>
     </scripts>
     <scripts name="utils">
       <scripts name="ds_list">
         <script>scripts\ds_list_merge.gml</script>
         <script>scripts\ds_list_unique.gml</script>
+        <script>scripts\ds_list_delete_elements.gml</script>
       </scripts>
     </scripts>
     <scripts name="meters">
