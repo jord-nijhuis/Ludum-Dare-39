@@ -30,7 +30,7 @@ if(!is_undefined(popularity))
 
 if(is_undefined(day))
 {
-    day = 30000;
+    day = 5;
 }
 
 global.day = scr_add_days(global.day, day);
