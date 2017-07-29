@@ -1,0 +1,40 @@
+[
+	{
+		"text": "Mexicans are a big problem! What are we going to do?",
+		"stage": "election",
+		"choices": [
+			{
+				"text": "I'll have a meeting with the president of Mexico.",
+				"power": -5,
+			},
+			{
+				"text": "Build a well",
+				"money": -20,
+				"triggers": [
+					"BUILD_WALL"
+				]
+			}
+		]
+	},
+
+	{
+		"text": "How are we going to pay for this wall?",
+		"stage": "election",
+		"requires_triggers" :
+		[
+			"BUILD_WALL"
+		],
+		"choices": [
+			{
+				"text": "We will get support from Russia",
+				"money": 500,
+				"power": -20,
+			},
+			{
+				"text": "We are not going to build it, are you stupid?",
+				"money": 20,
+				"popularity": -10
+			}
+		]
+	}
+]

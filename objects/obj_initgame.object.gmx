@@ -29,6 +29,18 @@
 global.tr_power = 50;
 global.tr_popularity = 50;
 
+global.dialogue = scr_dialogue_load();
+global.used_dialogue = ds_list_create();
+global.triggers = ds_list_create();
+global.stage = "election";
+
+var option = scr_dialogue_select_next();
+var choices = ds_map_find_value(option, "choices");
+var choice = ds_list_find_value(choices, 1);
+
+scr_dialogue_choice_execute(choice);
+
+var b = "a";
 </string>
           </argument>
         </arguments>

@@ -3,6 +3,25 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="1" name="datafiles">
+    <datafile>
+      <name>dialogue.json</name>
+      <exists>-1</exists>
+      <size>301</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>dialogue.json</filename>
+    </datafile>
+  </datafiles>
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
@@ -28,6 +47,21 @@
       <script>scripts\src_gui_update.gml</script>
       <script>scripts\scr_gui_draw.gml</script>
     </scripts>
+    <scripts name="dialogue">
+      <script>scripts\scr_dialogue_load.gml</script>
+      <script>scripts\scr_dialogue_select_by_stage.gml</script>
+      <script>scripts\scr_dialogue_select_new.gml</script>
+      <script>scripts\scr_dialogue_select_random.gml</script>
+      <script>scripts\scr_dialogue_select_without_unstatisfied_triggers.gml</script>
+      <script>scripts\scr_dialogue_choice_execute.gml</script>
+      <script>scripts\scr_dialogue_select_next.gml</script>
+    </scripts>
+    <scripts name="utils">
+      <scripts name="ds_list">
+        <script>scripts\ds_list_merge.gml</script>
+        <script>scripts\ds_list_unique.gml</script>
+      </scripts>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_gui</font>
@@ -37,9 +71,7 @@
       <object>objects\obj_scr_draw_text</object>
     </objects>
     <object>objects\obj_initgame</object>
-    <objects name="gui">
-      <object>objects\obj_gui</object>
-    </objects>
+    <object>objects\obj_gui</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_initialize</room>
