@@ -25,19 +25,19 @@ if(!is_undefined(money))
 // Power
 if(!is_undefined(_power))
 {
-    scr_power_increase(_power);
+    scr_power_add(_power);
 }
 
 // Popularity
 if(!is_undefined(popularity))
 {
-    scr_popularity_increase(popularity);
+    scr_popularity_add(popularity);
 }
 
 // Day
 if(is_undefined(day))
 {
-    day = 5;
+    day = round(random_range(25, 35));
 }
 
 global.day = scr_add_days(global.day, day);
