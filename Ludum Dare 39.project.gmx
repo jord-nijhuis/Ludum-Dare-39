@@ -5,10 +5,37 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprites name="gui">
+      <sprite>sprites\spr_gui_powermeter_background</sprite>
+      <sprite>sprites\spr_gui_powermeter_foreground</sprite>
+    </sprites>
+    <sprites name="control">
+      <sprite>sprites\spr_initigame</sprite>
+    </sprites>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <rooms name="rooms"/>
+  <scripts name="scripts">
+    <scripts name="gui">
+      <script>scripts\scr_gui_init.gml</script>
+      <script>scripts\src_gui_update.gml</script>
+      <script>scripts\scr_gui_draw.gml</script>
+    </scripts>
+  </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_gui</font>
+  </fonts>
+  <objects name="objects">
+    <object>objects\obj_initgame</object>
+    <objects name="gui">
+      <object>objects\obj_gui</object>
+    </objects>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_initialize</room>
+    <room>rooms\rm_guitest</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
