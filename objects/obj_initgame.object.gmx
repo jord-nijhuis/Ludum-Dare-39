@@ -28,7 +28,6 @@
             <string>global.tr_money = 0;
 global.tr_power = 50;
 global.tr_popularity = 50;
-
 </string>
           </argument>
         </arguments>
