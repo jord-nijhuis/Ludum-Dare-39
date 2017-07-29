@@ -13,7 +13,10 @@
     </sprites>
     <sprites name="control">
       <sprite>sprites\spr_initigame</sprite>
+      <sprite>sprites\spr_cardmanager</sprite>
     </sprites>
+    <sprite>sprites\spr_card</sprite>
+    <sprite>sprites\spr_cardoption</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -25,9 +28,11 @@
       <script>scripts\scr_draw_text_resume.gml</script>
     </scripts>
     <scripts name="gui">
-      <script>scripts\scr_gui_init.gml</script>
-      <script>scripts\src_gui_update.gml</script>
-      <script>scripts\scr_gui_draw.gml</script>
+      <scripts name="internal">
+        <script>scripts\scr_gui_init.gml</script>
+        <script>scripts\scr_gui_update.gml</script>
+        <script>scripts\scr_gui_draw.gml</script>
+      </scripts>
     </scripts>
     <scripts name="meters">
       <script>scripts\scr_popularity_increase.gml</script>
@@ -37,9 +42,31 @@
       <script>scripts\scr_money_add.gml</script>
       <script>scripts\scr_money_subtract.gml</script>
     </scripts>
+    <scripts name="card">
+      <script>scripts\scr_show_card.gml</script>
+      <script>scripts\scr_getcurrentcard.gml</script>
+      <script>scripts\scr_setcurrentcard.gml</script>
+      <scripts name="internal">
+        <script>scripts\scr_card_init.gml</script>
+        <script>scripts\scr_card_update.gml</script>
+      </scripts>
+    </scripts>
+    <scripts name="cardmanager">
+      <scripts name="internal">
+        <script>scripts\scr_cardmanager_init.gml</script>
+      </scripts>
+    </scripts>
+    <scripts name="cardoption">
+      <script>scripts\scr_createcardoption.gml</script>
+      <scripts name="internal">
+        <script>scripts\scr_cardoption_draw.gml</script>
+        <script>scripts\scr_cardoption_update.gml</script>
+      </scripts>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_gui</font>
+    <font>fonts\fnt_card</font>
   </fonts>
   <objects name="objects">
     <objects name="scr">
@@ -48,6 +75,11 @@
     <object>objects\obj_initgame</object>
     <objects name="gui">
       <object>objects\obj_gui</object>
+    </objects>
+    <objects name="cards">
+      <object>objects\obj_card</object>
+      <object>objects\obj_cardmanager</object>
+      <object>objects\obj_cardoption</object>
     </objects>
   </objects>
   <rooms name="rooms">

@@ -52,6 +52,7 @@
   </views>
   <instances>
     <instance objName="obj_gui" x="0" y="0" name="inst_C43792EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_cardmanager" x="0" y="32" name="inst_EF6DC237" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

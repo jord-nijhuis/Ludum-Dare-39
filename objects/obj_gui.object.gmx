@@ -67,7 +67,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>src_gui_update</script>
+            <script>scr_gui_update</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -176,6 +176,35 @@
           <argument>
             <kind>0</kind>
             <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="90">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (scr_getcurrentcard()==0) {
+    list = ds_list_create();
+    ds_list_add(list, scr_createcardoption("Power",     10, -500,   -5));
+    ds_list_add(list, scr_createcardoption("Money",     -5, 1000,   -5));
+    ds_list_add(list, scr_createcardoption("Popularity",-5, -500,   10));
+    scr_show_card("h hoi Jord wat een kutverhaal. hoi Jord wat een kutverhaal. hoi Jord wat een kutverhaal.hoi Jord wat een kutverhaal.hoi Jord wat een kutverhaal. hoi Jord wat een kutverhaal.oi Jord wat een kutverhaal.", list);
+}
+</string>
           </argument>
         </arguments>
       </action>
