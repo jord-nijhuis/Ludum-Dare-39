@@ -2,7 +2,7 @@
 {  
       "id":"OBAMA_REVEALS",
       "text":"Obama decides to respond to your twitter ramblings and publishes a copy of his birth certificate. There's nothing special on there.",
-      "stage":"election",
+      "stage":"special_event",
       "choices":[  
          {  
             "text":"Low energy.",
@@ -14,7 +14,7 @@
    {  
       "id":"OBAMA_IGNORES",
       "text":"Obama ignores your twitter rant.",
-      "stage":"election",
+      "stage":"special_event",
       "choices":[  
          {  
             "text":"Call him a fake president.",
