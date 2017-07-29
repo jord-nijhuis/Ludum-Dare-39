@@ -23,7 +23,15 @@
     </datafile>
   </datafiles>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sounds name="phrases">
+      <sound>sound\snd_china_all_the_time</sound>
+      <sound>sound\snd_china</sound>
+      <sound>sound\snd_love_mexicans</sound>
+      <sound>sound\snd_love_china</sound>
+      <sound>sound\snd_wall</sound>
+    </sounds>
+  </sounds>
   <sprites name="sprites">
     <sprites name="gui">
       <sprite>sprites\spr_gui_powermeter_background</sprite>
@@ -71,6 +79,7 @@
         <script>scripts\ds_list_unique.gml</script>
         <script>scripts\ds_list_delete_elements.gml</script>
       </scripts>
+      <script>scripts\create_array.gml</script>
     </scripts>
     <scripts name="meters">
       <script>scripts\scr_popularity_increase.gml</script>
@@ -112,6 +121,10 @@
       <script>scripts\scr_add_days.gml</script>
       <script>scripts\scr_get_readable_stage.gml</script>
     </scripts>
+    <scripts name="phrases">
+      <script>scripts\scr_phrases_select_by_name.gml</script>
+      <script>scripts\scr_phrases_select_all.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_gui</font>
@@ -121,12 +134,12 @@
     <objects name="scr">
       <object>objects\obj_scr_draw_text</object>
     </objects>
+    <object>objects\obj_card</object>
     <object>objects\obj_initgame</object>
     <objects name="gui">
       <object>objects\obj_gui</object>
     </objects>
     <objects name="cards">
-      <object>objects\obj_card</object>
       <object>objects\obj_cardmanager</object>
       <object>objects\obj_cardoption</object>
     </objects>

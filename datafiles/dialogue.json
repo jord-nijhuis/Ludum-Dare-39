@@ -2,7 +2,7 @@
 {  
       "id":"OBAMA_REVEALS",
       "text":"Obama decides to respond to your twitter ramblings and publishes a copy of his birth certificate. There's nothing special on there.",
-      "stage":"election",
+      "stage":"special_event",
       "choices":[  
          {  
             "text":"Low energy.",
@@ -14,7 +14,7 @@
    {  
       "id":"OBAMA_IGNORES",
       "text":"Obama ignores your twitter rant.",
-      "stage":"election",
+      "stage":"special_event",
       "choices":[  
          {  
             "text":"Call him a fake president.",
@@ -66,12 +66,14 @@
       "stage":"election",
       "choices":[  
          {  
-            "text":"I'll have a meeting with the president of Mexico.",
+            "text": "I'll have a meeting with the president of Mexico.",
+            "sound": "mexicans_positive",
             "power":-5
          },
          {  
             "text":"Build a wall",
             "money":-20,
+            "sound": "wall",
             "triggers":[  
                "BUILD_WALL"
             ]
@@ -129,6 +131,7 @@
       "id":"SEXTAPE_HAPPY",
       "text":"The sextape is a big hit in CHINA. All profits go to your campaign.",
       "stage":"special_event",
+      "sound": "china_positive",
       "choices":[  
          {  
             "text":"Nice!",
@@ -158,6 +161,7 @@
       "choices":[  
          {  
             "text":"Throw more money against it and hope they'll give up their land.",
+      		"sound": "wall",
             "money":-10000,
             "popularity":-15,
             "power":10
@@ -174,6 +178,7 @@
       "id":"WALLFINANCE",
       "text":"How are we going to pay for this wall?",
       "stage":"election",
+      "sound": "wall",
       "requires_triggers":[  
          "BUILD_WALL"
       ],
@@ -200,7 +205,8 @@
             "text":"We are not going to build it, are you stupid?",
             "money":20,
             "popularity":-10,
-            "unset_triggers": ["BUILD_WALL"]
+            "unset_triggers": ["BUILD_WALL"],
+            "sound": "mexicans_positive"
          }
       ]
    }

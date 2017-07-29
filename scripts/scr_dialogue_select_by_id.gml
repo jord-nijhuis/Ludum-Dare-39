@@ -11,7 +11,7 @@ if(is_undefined(_id))
     return undefined;
 }
 
-for(i = 0; i < ds_list_size(dialogue); i++)
+for(var i = 0; i < ds_list_size(dialogue); i++)
 {
     var option = ds_list_find_value(dialogue, i);
     

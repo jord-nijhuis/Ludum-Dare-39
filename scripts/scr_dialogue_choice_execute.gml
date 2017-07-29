@@ -10,6 +10,7 @@ var popularity = ds_map_find_value(choice, "popularity");
 var day = ds_map_find_value(choice, "day");
 var triggers = ds_map_find_value(choice, "triggers");
 var unset_triggers = ds_map_find_value(choice, "unset_triggers");
+var sound = ds_map_find_value(choice, "sound");
 
 // Add the choice we are executing to the used choices
 ds_list_add(global.used_choices, choice);
@@ -53,3 +54,8 @@ if(!is_undefined(unset_triggers))
     ds_list_delete_elements(global.triggers, unset_triggers);
 }
 
+// Play sound
+if(!is_undefined(sound))
+{
+    audio_play_sound(scr_phrases_select_by_name(sound), 20, false);
+}
