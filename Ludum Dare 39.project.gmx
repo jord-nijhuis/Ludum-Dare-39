@@ -28,6 +28,7 @@
     <sprites name="gui">
       <sprite>sprites\spr_gui_powermeter_background</sprite>
       <sprite>sprites\spr_gui_powermeter_foreground</sprite>
+      <sprite>sprites\spr_gui_popularity</sprite>
     </sprites>
     <sprites name="control">
       <sprite>sprites\spr_initigame</sprite>
@@ -61,6 +62,14 @@
         <script>scripts\ds_list_merge.gml</script>
         <script>scripts\ds_list_unique.gml</script>
       </scripts>
+    </scripts>
+    <scripts name="meters">
+      <script>scripts\scr_popularity_increase.gml</script>
+      <script>scripts\scr_popularity_decrease.gml</script>
+      <script>scripts\scr_power_increase.gml</script>
+      <script>scripts\scr_power_decrease.gml</script>
+      <script>scripts\scr_money_add.gml</script>
+      <script>scripts\scr_money_subtract.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

@@ -14,17 +14,17 @@ ds_list_add(global.used_dialogue, choice);
 
 if(!is_undefined(money))
 {
-    global.tr_money += money;
+    scr_money_add(money);
 }
 
 if(!is_undefined(_power))
 {
-    global.tr_power += _power;
+    scr_power_increase(_power);
 }
 
 if(!is_undefined(popularity))
 {
-    global.tr_popularity += popularity;
+    scr_popularity_increase(populairity);
 }
 
 if(!is_undefined(triggers))
