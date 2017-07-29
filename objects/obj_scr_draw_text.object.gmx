@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -76,7 +76,8 @@ if(string_length(drawable_text) == string_length(text))
     exit;
 }
 
-drawable_text = string_copy(text, 1, string_length(drawable_text) + 1)
+drawable_text = string_copy(text, 1, string_length(drawable_text) + 1);
+
 alarm[0] = time;
 
 </string>

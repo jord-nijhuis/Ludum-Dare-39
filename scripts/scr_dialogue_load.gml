@@ -1,15 +1,12 @@
 // Loads the dialogue.json file and returns it as a ds_list with all the dialogue options
 
-var file = file_text_open_read("dialogue.json");
+var climatechange = scr_dialogue_load_sub("election/climatechange.json");
+var golf = scr_dialogue_load_sub("election/golf.json");
+var mexicanwall = scr_dialogue_load_sub("multistage/mexicanwall.json");
+var randombonus = scr_dialogue_load_sub("election/randombonus.json");
+var sextape = scr_dialogue_load_sub("election/sextape.json");
+var twitter = scr_dialogue_load_sub("election/twitter.json");
 
-var json = "";
+ds_list_merge(climatechange, golf, mexicanwall, randombonus, sextape, twitter);
 
-while(!file_text_eof(file))
-{   
-    json += file_text_read_string(file);
-    file_text_readln(file);    
-}
-
-file_text_close(file);
-
-return ds_map_find_value(json_decode(json), "default");
+return climatechange;

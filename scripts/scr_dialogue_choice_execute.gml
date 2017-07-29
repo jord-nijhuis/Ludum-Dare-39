@@ -10,6 +10,8 @@ var popularity = ds_map_find_value(choice, "popularity");
 var day = ds_map_find_value(choice, "day");
 var triggers = ds_map_find_value(choice, "triggers");
 var unset_triggers = ds_map_find_value(choice, "unset_triggers");
+var sound = ds_map_find_value(choice, "sound");
+var change_room = ds_map_find_value(choice, "change_room");
 
 // Add the choice we are executing to the used choices
 ds_list_add(global.used_choices, choice);
@@ -43,7 +45,14 @@ global.day = scr_add_days(global.day, day);
 // Triggers
 if(!is_undefined(triggers))
 {
-    global.triggers = ds_list_unique(ds_list_merge(global.triggers, triggers));
+    ds_list_merge(global.triggers, triggers)
+    ds_list_unique(global.triggers);
+}
+
+// Change room
+if(!is_undefined(change_room))
+{
+    room_goto(asset_get_index(change_room));
 }
 
 // Unset Triggers
@@ -52,3 +61,8 @@ if(!is_undefined(unset_triggers))
     ds_list_delete_elements(global.triggers, unset_triggers);
 }
 
+// Play sound
+if(!is_undefined(sound))
+{
+    audio_play_sound(scr_phrases_select_by_name(sound), 20, false);
+}

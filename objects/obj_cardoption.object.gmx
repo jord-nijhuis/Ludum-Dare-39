@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>-10</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -33,6 +33,7 @@ image_xscale = 0;
 image_yscale = 0;
 
 choice = undefined;
+font = fnt_option;
 </string>
           </argument>
         </arguments>

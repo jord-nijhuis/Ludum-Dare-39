@@ -1,7 +1,11 @@
 // Selects a single dialogue option that matches all the criteria
 // Note that this uses the global variables that are declared in obj_initgame
 
-
+if (global.overwrite_event != undefined) {
+    var ret = global.overwrite_event;
+    global.overwrite_event = undefined;
+    return ret;
+}
 
 if(ds_list_size(global.used_choices) > 0)
 {

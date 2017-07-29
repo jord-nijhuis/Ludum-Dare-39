@@ -1,0 +1,16 @@
+[
+    {  
+
+      "id":"RANDOMCHINAVISIT",
+      "text":"You decide to take a vacation to china! You visit the great wall and think of new ideas on how to keep immigrants from entering America.",
+      "stage":"election",
+      "sound":"china",
+      "choices":[  
+         {  
+            "text":"That was a nice vacation.",
+            "popularity":-1,
+            "money": -1000
+         }
+      ]
+   }
+]

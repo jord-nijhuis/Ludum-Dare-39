@@ -26,4 +26,5 @@ for(var i = 0; i < ds_list_size(list); i++)
 }
 
 ds_list_destroy(values);
-return new_list;
+ds_list_copy(list, new_list);
+ds_list_destroy(new_list);

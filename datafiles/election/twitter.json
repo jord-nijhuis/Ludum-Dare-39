@@ -1,0 +1,64 @@
+[
+    {  
+
+      "id":"OBAMA_REVEALS",
+      "text":"Obama decides to respond to your twitter ramblings and publishes a copy of his birth certificate. There's nothing special on there.",
+      "stage":"special_event",
+      "choices":[  
+         {  
+            "text":"Low energy.",
+            "power": -3,
+            "popularity":-7
+         }
+      ]
+   },
+   {  
+      "id":"OBAMA_IGNORES",
+      "text":"Obama ignores your twitter rant.",
+      "stage":"special_event",
+      "choices":[  
+         {  
+            "text":"Call him a fake president.",
+            "power": 4,
+            "popularity":5
+         },
+         {  
+            "text":"Call him a muslim.",
+            "power": 3,
+            "popularity":6
+         }
+      ]
+   },
+   {  
+      "id":"CLINTONTWITTER",
+      "text":"Hillary Clinton is gaining more and more followers on twitter. What is your strategy?",
+      "stage":"election",
+      "choices":[  
+         {  
+            "text":"Arrange for her account to be locked down.",
+            "money":-5000,
+            "power": 2,
+            "popularity":6
+         },
+         {  
+            "text":"Go on a twittering spree and show her who is the real future president.",
+            "power": 1,
+            "popularity": 2,
+         },
+         {  
+            "text":"Twitter about how Obama should release his birth certificate to gain more followers.",
+            "popularity": 4,
+            "next_events": [  
+               {  
+                  "event":"OBAMA_REVEALS",
+                  "weight":1
+               },
+               {  
+                  "event":"OBAMA_IGNORES",
+                  "weight":1
+               }
+            ]
+         }
+      ]
+   }
+]

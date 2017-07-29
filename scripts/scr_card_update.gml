@@ -8,6 +8,7 @@ textObject.x = x;
 textObject.y = y - 128;
 
 if (scr_draw_text_is_finished(textObject)) {
+
     scr_activatecard(self);
 }
 

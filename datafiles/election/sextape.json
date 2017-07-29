@@ -1,0 +1,51 @@
+[
+   {  
+      "id":"SEXTAPE",
+      "text":"Oh no! A sex tape with you peeing on some russian hooker has been leaked! What do you do?",
+      "stage":"election",
+      "choices":[  
+         {  
+            "text":"Send the FBI to destroy evidence.",
+            "money":-10000
+         },
+         {  
+            "text":"Assert dominance and claim ownership of the tape",
+            "money":-20,
+            "next_events":[  
+               {  
+                  "event":"SEXTAPE_HAPPY",
+                  "weight":1
+               },
+               {  
+                  "event":"SEXTAPE_SAD",
+                  "weight":1
+               }
+            ]
+         }
+      ]
+   },
+   {  
+      "id":"SEXTAPE_HAPPY",
+      "text":"The sextape is a big hit in CHINA. All profits go to your campaign.",
+      "stage":"special_event",
+      "sound": "china_positive",
+      "choices":[  
+         {  
+            "text":"Nice!",
+            "money":10000
+         }
+      ]
+   },
+   {  
+      "id":"SEXTAPE_SAD",
+      "text":"Unfortunately, your image hasn't exactly improved after the sex tape leaked.",
+      "stage":"special_event",
+      "choices":[  
+         {  
+            "text":"Worst. Sextape. Ever.",
+            "power":-10,
+            "popularity":-20
+         }
+      ]
+   }
+]

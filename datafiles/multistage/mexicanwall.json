@@ -1,0 +1,81 @@
+[  
+   {  
+      "id":"MEXICANS",
+      "text":"Mexicans are a big problem! What are we going to do?",
+      "stage":"election",
+      "choices":[  
+         {  
+            "text": "I'll have a meeting with the president of Mexico.",
+            "sound": "mexicans_positive",
+            "power":-5
+         },
+         {  
+            "text":"Build a wall",
+            "money":-20,
+            "sound": "wall",
+            "triggers":[  
+               "BUILD_WALL"
+            ]
+         }
+      ]
+   },
+   {  
+      "id":"WALLPROBLEM",
+      "text":"An angry group of citizens doesn't want to give up their backyard for the great big wall, so building has come to a stop.",
+      "stage":"president",
+      "requires_triggers":[  
+         "BUILD_WALL"
+      ],
+      "choices":[  
+         {  
+            "text":"Throw more money against it and hope they'll give up their land.",
+      		"sound": "wall",
+            "money":-10000,
+            "popularity":-15,
+            "power":10
+         },
+         {  
+            "text":"Leave a hole in the wall.",
+            "money":0,
+            "power":-5,
+            "popularity":5
+         }
+      ]
+   },
+   {  
+      "id":"WALLFINANCE",
+      "text":"How are we going to pay for this wall?",
+      "stage":"election",
+      "sound": "wall",
+      "requires_triggers":[  
+         "BUILD_WALL"
+      ],
+      "choices":[  
+         {  
+            "text":"We will get support from Russia",
+            "money":50000,
+            "power":-20,
+            "popularity": -5
+         },
+         {  
+            "text":"Mexico will pay for the wall, of course!",
+            "money":25000,
+            "power":-10,
+            "popularity": 5
+         },
+         {  
+            "text":"The taxpayers will pay for this wall.",
+            "money":-50000,
+            "power":5,
+            "popularity": -15
+         },
+         {  
+            "text":"We are not going to build it, are you stupid?",
+            "money":20,
+            "popularity":-10,
+            "unset_triggers": ["BUILD_WALL"],
+            "sound": "mexicans_positive"
+         }
+      ]
+   }
+]

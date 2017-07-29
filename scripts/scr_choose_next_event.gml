@@ -3,7 +3,7 @@ var possible_next_events = argument0;
 
 var choices = ds_list_create();
 
-for(i = 0; i < ds_list_size(possible_next_events); i++)
+for(var i = 0; i < ds_list_size(possible_next_events); i++)
 {
     var next_event = ds_list_find_value(possible_next_events, i);
     var weight = ds_map_find_value(next_event, "weight");

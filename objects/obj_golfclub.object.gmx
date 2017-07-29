@@ -30,6 +30,11 @@ clubAngleTarget = 0;
 charging = false;
 charge = 0;
 shooting = false;
+driving = false;
+incart = false;
+active = false;
+waiting = false;
+gotoball = false;
 </string>
           </argument>
         </arguments>
@@ -176,9 +181,10 @@ shooting = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>directionTarget = point_direction(obj_golfball.x,obj_golfball.y,mouse_x,mouse_y)-90;
-direction+=(angle_diff(direction,directionTarget))/10.0;
-clubAngle+=(clubAngleTarget-clubAngle)/10.0;
+            <string>if (!instance_exists(obj_golfball)) {
+    exit;
+}
+
 image_angle=direction;
 image_index = 0;
 image_speed = 0;
@@ -192,17 +198,60 @@ if (shooting) {
     if (abs(clubAngle&lt;=1)) {
         obj_golfball.direction = direction + 90;
         obj_golfball.speed = charge / 4;
+        global.golfswings += 1;
+        shooting = false;
+        active = false;
+        waiting = true;
     }
     
-    shooting = false;
+} else {
+    if (!waiting &amp;&amp; active &amp;&amp; !incart &amp;&amp; !driving &amp;&amp; obj_golfball.speed &lt;= 0.1) {
+        if (gotoball) {
+            move_towards_point(obj_golfball.x, obj_golfball.y, 3);
+            if (point_distance(x,y,obj_golfball.x, obj_golfball.y)&lt;50) {
+                gotoball = false;
+            }
+        } else {
+        
+            x += ((obj_golfball.x - lengthdir_x(62, image_angle)) - x)/10;
+            y += ((obj_golfball.y - lengthdir_y(62, image_angle)) - y)/10;
+            directionTarget = point_direction(obj_golfball.x,obj_golfball.y,mouse_x,mouse_y)-90;
+            speed = 0;
+            direction+=(angle_diff(direction,directionTarget))/10.0;
+        }
+    }
 }
 
-if (obj_golfball.speed &lt;= 0.1) {
-    x = obj_golfball.x - lengthdir_x(62, image_angle);
-    y = obj_golfball.y - lengthdir_y(62, image_angle);
-    active = true;
-} else {
-    active = false;
+clubAngle+=(clubAngleTarget-clubAngle)/10.0;
+
+if (incart) {
+    x = obj_golfcart.x;
+    y = obj_golfcart.y;
+}
+if (!active) {
+    if (obj_golfball.speed &lt;= 0.1) {
+        if (incart &amp;&amp; point_distance(x,y,obj_golfball.x+150,y)&lt;30) {
+            active = true;
+            driving = false;
+            incart = false;
+            obj_golfcart.trump = false;
+            waiting = false;
+        } else {
+            driving = true;
+            
+            show_debug_message("gotoball");
+            gotoball = true;
+            if (!incart) {
+                move_towards_point(obj_golfcart.x, obj_golfcart.y, 3);
+                if (distance_to_object(obj_golfcart)&lt;2) {
+                    incart = true;
+                    obj_golfcart.trump = true;
+                }
+            }
+        }
+    } else {
+        active = false;
+    }
 }
 </string>
           </argument>
@@ -226,7 +275,107 @@ if (obj_golfball.speed &lt;= 0.1) {
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>active</string>
+            <string>!incart &amp;&amp; !gotoball</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_sprite_ext(spr_trumpgolf, 1, x, y, 1, 1, image_angle+clubAngle, c_white, 1);
+if (charging) {
+    draw_sprite_general(spr_gui_powermeter, 0, 0,0,(charge/100)*128,32, obj_golfball.x+lengthdir_x(-16,image_angle),obj_golfball.y+lengthdir_y(-16,image_angle),1,1,image_angle+90,c_white,c_white,c_white,c_white,1);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>500</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring>draw_self();</codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>421</id>
+        <kind>3</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>408</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>!incart</string>
           </argument>
         </arguments>
       </action>
@@ -257,30 +406,6 @@ if (obj_golfball.speed &lt;= 0.1) {
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>draw_sprite_ext(spr_trumpgolf, 1, x, y, 1, 1, image_angle+clubAngle, c_white, 1);
-if (charging) {
-    draw_sprite_general(spr_gui_powermeter, 0, 0,0,(charge/100)*128,32, obj_golfball.x+lengthdir_x(16,image_angle+90),obj_golfball.y+lengthdir_y(16,image_angle+90),1,1,image_angle+90,c_white,c_white,c_white,c_white,1);
-}
-</string>
-          </argument>
-        </arguments>
       </action>
       <action>
         <libid>1</libid>
@@ -427,6 +552,30 @@ if (charging) {
           <argument>
             <kind>0</kind>
             <string>-charge</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>waiting</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>true</string>
           </argument>
         </arguments>
       </action>

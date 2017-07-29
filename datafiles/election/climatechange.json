@@ -1,0 +1,24 @@
+[
+    {  
+      "id":"CLIMATECHANGE",
+      "text":"Climate change is getting worse. Of course, I am gonna...",
+      "stage":"election",
+      "choices":[  
+         {  
+            "text":"Work together with other countries to stop climate change",
+            "money": -10000,
+            "power": -8,
+            "popularity": 5
+         },
+         {  
+            "text":"Ignore that, and open up some more coal mines!",
+            "money":20000,
+            "power": 10,
+            "popularity": -7,
+            "triggers":[  
+               "DROUGHT"
+            ]
+         }
+      ]
+   }
+]
