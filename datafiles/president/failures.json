@@ -1,0 +1,35 @@
+[
+	{
+		"id": "FAILURE_POWER",
+		"text": "Like a helpless baby you sat there. You saw the Russians marching into Washington DC, but you chould not stop them. You saw Putin entering the White House, but you could not stop him. You have never felt so powerless.",
+		"stage": "special_event",
+		"choices": [
+			{
+				"text": "Play again.",
+				"triggers": ["RESTART"]
+			},
+
+			{
+				"text": "Quit.",
+				"triggers": ["QUIT"]
+			}
+		]
+	},
+
+	{
+		"id": "FAILURE_MONEY",
+		"text": "You were a good leader. A great one in fact, but as you saw a homeless man on the street, you realised he had more belongings than you currently have. Money is power, and you had none of it.",
+		"stage": "special_event",
+		"choices": [
+			{
+				"text": "Play again.",
+				"triggers": ["RESTART"]
+			},
+
+			{
+				"text": "Quit.",
+				"triggers": ["QUIT"]
+			}
+		]
+	}
+]	
