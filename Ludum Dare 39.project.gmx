@@ -166,7 +166,9 @@
     <sprite>sprites\spr_golf_hole</sprite>
     <sprite>sprites\spr_golfcart</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_background</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="draw_text">
