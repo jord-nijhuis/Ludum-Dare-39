@@ -152,7 +152,7 @@
             "money": -10000
          },
          {
-            "text": "Do nothing, he only has a few millions anaway."
+            "text": "Do nothing, he only has a few millions anyway."
          }
       ]
    },
@@ -160,7 +160,7 @@
    {
       "id": "LOLITA_EXPRESS",
       "stage": "election",
-      "text": "Some Calefornian journalists wants to publush a photo of you entering the Lolita Express and now asks for a comment.",
+      "text": "Some Californian journalists wants to publish a photo of you entering the Lolita Express and now asks for a comment.",
       "choices": [
          {
             "text": "Tell her that it's fake news.",
@@ -180,7 +180,7 @@
    {
       "id": "FEEL_THE_BERN",
       "stage": "election",
-      "text": "You suddenly feel like giving your opionion on Bernie Sander, so you Twitter...",
+      "text": "You suddenly feel like giving your opionion on Bernie Sanders, so you Twitter...",
       "choices": [
          {
             "text": "FEEL THE BERN",
@@ -195,7 +195,7 @@
          },
 
          {
-            "text": "I'm teweeting about who?"
+            "text": "I'm tweeting about who?"
          }
       ]
    }
