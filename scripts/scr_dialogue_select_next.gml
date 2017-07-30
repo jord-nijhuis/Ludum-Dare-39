@@ -28,9 +28,10 @@ if(ds_list_size(global.used_choices) > 0)
     }
 }
 
-var dialogue = scr_dialogue_select_by_stage(global.dialogue, scr_get_stage(global.day));
-dialogue = scr_dialogue_select_without_unstatisfied_triggers(dialogue, global.triggers);
-dialogue = scr_dialogue_select_new(dialogue, global.used_dialogue);
+var dialogue_stage = scr_dialogue_select_by_stage(global.dialogue, scr_get_stage(global.day));
+var dialouge_triggers = scr_dialogue_select_without_unstatisfied_triggers(dialogue_stage, global.triggers);
+dialogue = scr_dialogue_select_new(dialouge_triggers, global.used_dialogue);
 
-
+ds_list_destroy(dialogue_stage);
+ds_list_destroy(dialouge_triggers);
 return scr_dialogue_select_random(dialogue);

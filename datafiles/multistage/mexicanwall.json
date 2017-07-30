@@ -7,11 +7,12 @@
          {  
             "text": "I'll have a meeting with the president of Mexico.",
             "sound": "mexicans_positive",
-            "power":-5
+            "power": -5
          },
          {  
             "text":"Build a wall",
-            "money":-20,
+            "money": -2000,
+            "power": 5,
             "sound": "wall",
             "triggers":[  
                "BUILD_WALL"
@@ -71,7 +72,7 @@
          },
          {  
             "text":"We are not going to build it, are you stupid?",
-            "money":20,
+            "money":2000,
             "popularity":-10,
             "unset_triggers": ["BUILD_WALL"],
             "sound": "mexicans_positive"

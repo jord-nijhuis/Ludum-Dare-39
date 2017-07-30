@@ -8,13 +8,13 @@
             "text":"Work together with other countries to stop climate change",
             "money": -10000,
             "power": -8,
-            "popularity": 5
+            "popularity": -5
          },
          {  
             "text":"Ignore that, and open up some more coal mines!",
             "money":20000,
             "power": 10,
-            "popularity": -7,
+            "popularity": 10,
             "triggers":[  
                "DROUGHT"
             ]

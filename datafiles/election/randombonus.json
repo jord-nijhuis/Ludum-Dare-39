@@ -1,15 +1,201 @@
-[
-    {  
+[{
 
-      "id":"RANDOMCHINAVISIT",
-      "text":"You decide to take a vacation to china! You visit the great wall and think of new ideas on how to keep immigrants from entering America.",
-      "stage":"election",
-      "sound":"china",
-      "choices":[  
-         {  
-            "text":"That was a nice vacation.",
-            "popularity":-1,
-            "money": -1000
+      "id": "RANDOMCHINAVISIT",
+      "text": "You decide to take a vacation to china! You visit the great wall and think of new ideas on how to keep immigrants from entering America.",
+      "stage": "election",
+      "sound": "china",
+      "choices": [{
+         "text": "That was a nice vacation.",
+         "popularity": -1,
+         "power": 3,
+         "money": -1000
+      }]
+   },
+
+   {
+      "id": "RANDOMHAMBURGER",
+      "text": "Counting millions is hard work, you get hungry and decide to eat a hamburger.",
+      "stage": "election",
+      "choices": [{
+         "text": "As long as it's YUUGE.",
+         "money": -36,
+         "next_events": [{
+               "event": "RANDOMHAMBURGER_PUBLICITY",
+               "weight": 1
+            },
+            {
+               "event": "RANDOMHAMBURGER_REFRESHED",
+               "weight": 1
+            }
+         ]
+      }]
+   },
+
+   {
+      "id": "RANDOMHAMBURGER_PUBLICITY",
+      "text": "Journalists notice your YUUGE hamburger and decide to write an article about it.",
+      "stage": "special_event",
+      "choices": [{
+         "text": "I love to read some left-wing articles.",
+         "popularity": 5,
+         "power": -5
+      }]
+   },
+
+   {
+      "id": "RANDOMHAMBURGER_REFRESHED",
+      "text": "You feel refreshed and decide that it is time to investigate Hillary.",
+      "stage": "special_event",
+      "choices": [{
+         "text": "Start an investigation.",
+         "power": 5,
+         "triggers": [
+            "HILLARY_INVESTIGATION"
+         ]
+      }]
+   },
+
+   {
+      "id": "FATHER_LOAN",
+      "text": "Your father wants to give you a small loan of a million.",
+      "stage": "election",
+      "choices": [{
+            "text": "I have my own money-printing factory now.",
+            "next_events": [{
+               "event": "FATHER_LOAN_RESPONSE",
+               "weight": 1
+            }]
+         },
+         {
+            "text": "Take it. Money is money after all.",
+            "money": 1000000,
+            "triggers": [
+               "FATHER_LOAN"
+            ]         }
+      ]
+   },
+
+   {
+      "id": "FATHER_LOAN_RESPONSE",
+      "text": "Your father criticizes you in public about how you horrible you treat him.",
+      "stage": "special_event",
+      "choices": [{
+         "text": "I have Melania now anyway, or was it Ivana?",
+         "popularity": -5
+      }]
+   },
+
+   {
+      "id": "SAYING_STUPID",
+      "text": "You haven't said something stupid in a long time and it's making you sick.",
+      "stage": "election",
+      "choices": [
+         {
+            "text": "I will be the greatest president God has ever created",
+            "power": 5,
+            "popularity": 5
+         },
+         {
+            "text": "The moonlanding was a hoax.",
+            "popularity": -5
+         },
+         {
+            "text": "You're fired.",
+            "next_events": [{
+               "event": "SAYING_STUPID_FIRED",
+               "weight": 1
+            }]
+         }
+      ]
+   },
+
+   {
+      "id": "SAYING_STUPID_FIRED",
+      "text": "How does that even work? You can't fire a game.",
+      "stage": "special_event",
+      "choices": [
+         {
+            "text": "Screw you."
+         }
+      ]
+   },
+
+   {
+      "id": "TOWER_ENTER",
+      "stage": "election",
+      "text": "You can't enter the Trump Tower because filthy Democrats are protesting. Again.",
+      "choices": [
+         {
+            "text": "Call the polcice, They'll probably shoot them right?",
+            "power": 10
+         },
+         {
+            "text": "I'll deal with them when I'm president."
+         }
+      ]
+   },
+
+   {
+      "id": "TOWER_BIGGER",
+      "stage": "election",
+      "text": "Some other filthy rich human being is building a tower next to the Tump Tover that is bigger than yours!",
+      "choices": [
+         {
+            "text": "Hire a good lawyer that will find a way to undo his bulding warrant.",
+            "power": 10,
+            "money": -5000
+         },
+         {
+            "text": "Build the biggest tower that has ever existed next to his tower.",
+            "power": 20,
+            "popularity": 10,
+            "money": -10000
+         },
+         {
+            "text": "Do nothing, he only has a few millions anaway."
+         }
+      ]
+   },
+
+   {
+      "id": "LOLITA_EXPRESS",
+      "stage": "election",
+      "text": "Some Calefornian journalists wants to publush a photo of you entering the Lolita Express and now asks for a comment.",
+      "choices": [
+         {
+            "text": "Tell her that it's fake news.",
+            "power": 2,
+         },
+         {
+            "text": "Tell her that you did not fly with that airplane.",
+            "popularity": 10,
+         },
+         {
+            "text": "Bribe her.",
+            "money": -2000
+         }
+      ]
+   },
+
+   {
+      "id": "FEEL_THE_BERN",
+      "stage": "election",
+      "text": "You suddenly feel like giving your opionion on Bernie Sander, so you Twitter...",
+      "choices": [
+         {
+            "text": "FEEL THE BERN",
+            "popularity": -20,
+            "power": -10
+         },
+
+         {
+            "text": "Amazing that a fossil from the USSR is running for presidency in the United States",
+            "popularity": 5,
+            "power": 5,
+         },
+
+         {
+            "text": "I'm teweeting about who?"
          }
       ]
    }

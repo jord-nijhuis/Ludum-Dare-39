@@ -8,6 +8,7 @@
          {  
             "text":"I love golf!",
             "popularity": 10,
+            "power": 10,
             "money": 10000,
          }
       ]

@@ -37,7 +37,7 @@ if(!is_undefined(popularity))
 // Day
 if(is_undefined(day))
 {
-    day = round(random_range(25, 35));
+    day = round(random_range(35, 45));
 }
 
 global.day = scr_add_days(global.day, day);

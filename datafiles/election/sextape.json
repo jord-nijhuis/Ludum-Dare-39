@@ -6,6 +6,7 @@
       "choices":[  
          {  
             "text":"Send the FBI to destroy evidence.",
+            "power": 5,
             "money":-10000
          },
          {  
@@ -32,6 +33,7 @@
       "choices":[  
          {  
             "text":"Nice!",
+            "popularity": 5,
             "money":10000
          }
       ]
