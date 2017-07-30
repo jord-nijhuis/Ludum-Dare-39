@@ -3,8 +3,8 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="11" name="datafiles">
-    <datafiles number="11" name="election">
+  <datafiles number="12" name="datafiles">
+    <datafiles number="12" name="election">
       <datafile>
         <name>twitter.json</name>
         <exists>-1</exists>
@@ -108,7 +108,7 @@
         <filename>start.json</filename>
       </datafile>
     </datafiles>
-    <datafiles number="11" name="multistage">
+    <datafiles number="12" name="multistage">
       <datafile>
         <name>mexicanwall.json</name>
         <exists>-1</exists>
@@ -127,7 +127,7 @@
         <filename>mexicanwall.json</filename>
       </datafile>
     </datafiles>
-    <datafiles number="11" name="election_day">
+    <datafiles number="12" name="election_day">
       <datafile>
         <name>election_day.json</name>
         <exists>-1</exists>
@@ -146,6 +146,25 @@
         <filename>election_day.json</filename>
       </datafile>
     </datafiles>
+    <datafiles number="12" name="president">
+      <datafile>
+        <name>terrorists.json</name>
+        <exists>-1</exists>
+        <size>369</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>terrorists.json</filename>
+      </datafile>
+    </datafiles>
   </datafiles>
   <NewExtensions/>
   <sounds name="sound">
@@ -162,6 +181,8 @@
     <sound>sound\snd_popularity_up</sound>
     <sound>sound\snd_power_up</sound>
     <sound>sound\snd_power_down</sound>
+    <sound>sound\snd_music</sound>
+    <sound>sound\snd_planecrash</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="gui">
@@ -184,9 +205,19 @@
     <sprite>sprites\spr_golf_offlimits</sprite>
     <sprite>sprites\spr_golf_hole</sprite>
     <sprite>sprites\spr_golfcart</sprite>
+    <sprites name="attack">
+      <sprite>sprites\spr_fire</sprite>
+      <sprite>sprites\spr_airplane</sprite>
+      <sprite>sprites\spr_explosion</sprite>
+      <sprite>sprites\spr_smoke</sprite>
+    </sprites>
+    <sprite>sprites\spr_skidmarks</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_background</background>
+    <background>background\bg_backgroundburned</background>
+    <background>background\fg_curtains</background>
+    <background>background\bg_golf</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -296,12 +327,21 @@
       <object>objects\obj_golf_finish</object>
       <object>objects\obj_golfcart</object>
       <object>objects\obj_golf_controller</object>
+      <object>objects\obj_skidmarks</object>
+    </objects>
+    <objects name="attack">
+      <object>objects\obj_airplane</object>
+      <object>objects\obj_fire</object>
+      <object>objects\obj_explosion</object>
+      <object>objects\obj_smoke</object>
+      <object>objects\obj_smoke_building</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_initialize</room>
     <room>rooms\rm_guitest</room>
     <room>rooms\rm_golfing</room>
+    <room>rooms\rm_terroristattack</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

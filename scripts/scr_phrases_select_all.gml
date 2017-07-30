@@ -26,6 +26,12 @@ ds_map_add(sounds, "wall", create_array(
 ds_map_add(sounds, "low_energy", create_array(
     snd_low_energy
 ));
+
+// Plane crash
+ds_map_add(sounds, "terroristattack", create_array(
+    snd_planecrash
+));
+
 return sounds;
 
 

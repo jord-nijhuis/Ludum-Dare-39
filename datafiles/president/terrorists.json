@@ -1,0 +1,33 @@
+[
+{
+
+      "id": "TERRORISTATTACK",
+      "text": "You're just about to eat an ice cream cone with two scoops of ice cream, when suddenly...",
+      "stage": "election",
+      "choices": [{
+         "sound": "terroristattack",
+         "text": "What's that noise?",
+         "triggers": ["TERRORISTS_ATTACKED"],
+         "change_room": "rm_terroristattack",
+         "next_events": [{
+               "event": "AFTER_TERRORISTATTACK",
+               "weight": 1
+            }]
+      }]
+},
+{
+
+      "id": "AFTER_TERRORISTATTACK",
+      "text": "Oh no, you were so startled by the explosion you dropped your ice cream! Those darn terrorists!",
+      "stage": "special_event",
+      "trigger": "TERRORISTS_ATTACKED",
+      "choices": 
+      [{
+         "text": "Ban all muslims from travelling to the US!",
+      },{
+         "text": "Increase surveillance!",
+      },{
+         "text": "Spend money on preventing radicalism.",
+      }]
+}
+]

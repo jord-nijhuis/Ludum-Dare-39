@@ -8,6 +8,7 @@ var randombonus = scr_dialogue_load_sub("election/randombonus.json");
 var sextape = scr_dialogue_load_sub("election/sextape.json");
 var twitter = scr_dialogue_load_sub("election/twitter.json");
 var election_day = scr_dialogue_load_sub("election_day/election_day.json");
+var terrorists = scr_dialogue_load_sub("president/terrorists.json");
 
 ds_list_merge(
     start,
@@ -17,7 +18,8 @@ ds_list_merge(
     randombonus, 
     sextape, 
     twitter,
-    election_day
+    election_day,
+    terrorists
 );
 
 return start;
