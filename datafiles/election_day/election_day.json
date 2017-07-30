@@ -23,12 +23,12 @@
 		"choices": [
 			{
 				"text": "Play again.",
-				"triggers": ["restart"]
+				"triggers": ["RESTART"]
 			},
 
 			{
 				"text": "Quit.",
-				"triggers": ["quit"]
+				"triggers": ["QUIT"]
 			}
 		]
 	}
