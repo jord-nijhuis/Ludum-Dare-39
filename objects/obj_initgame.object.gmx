@@ -29,7 +29,6 @@
 {
     randomize();
 }else{
-    show_message("DEBUG");
     random_set_seed("seed");
 }
 
@@ -43,6 +42,8 @@ global.used_choices = ds_list_create();
 global.triggers = ds_list_create();
 global.day = 0;
 global.overwrite_event = undefined;
+
+scr_dialogue_setoverwriteevent(scr_dialogue_select_by_id(global.dialogue, "START"));
 </string>
           </argument>
         </arguments>

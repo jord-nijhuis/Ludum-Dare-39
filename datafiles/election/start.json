@@ -1,0 +1,12 @@
+[
+	{
+		"id": "START",
+		"stage": "custom_event",
+		"text": "Ah, welcome Mr. Trump! So you are going to be running for office? Lets hope you can make the right decisions at the right time. After all, that is what being President is all about.",
+		"choices": [
+			{
+				"text": "Wait what, I'm running for President?"
+			}
+		]
+	}
+]
