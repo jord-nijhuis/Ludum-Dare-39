@@ -1,0 +1,35 @@
+[
+	{
+		"id": "election_day_won",
+		"stage": "custom_event",
+		"text": "Thanks to your amazing campaign you have won the election! How do you want to celebrate?",
+		"choices": [
+			{
+				"text": "With blackjack and hookers.",
+				"money": -100
+			},
+			{
+				"text": "Let's give the inauguration speech.",
+				"power": 10,
+				"popularity": 5
+			}
+		]
+	},
+
+	{
+		"id": "election_day_lost",
+		"stage": "custom_event",
+		"text": "Sadly the election was rigged by de Democrats, and now you've lost!",
+		"choices": [
+			{
+				"text": "Play again.",
+				"triggers": ["restart"]
+			},
+
+			{
+				"text": "Quit.",
+				"triggers": ["quit"]
+			}
+		]
+	}
+]

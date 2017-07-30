@@ -66,3 +66,6 @@ if(!is_undefined(sound))
 {
     audio_play_sound(scr_phrases_select_by_name(sound), 20, false);
 }
+
+scr_handle_custom_triggers(global.triggers);
+scr_handle_custom_stages(global.dialogue, scr_get_stage(global.day));

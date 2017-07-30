@@ -6,7 +6,16 @@ var mexicanwall = scr_dialogue_load_sub("multistage/mexicanwall.json");
 var randombonus = scr_dialogue_load_sub("election/randombonus.json");
 var sextape = scr_dialogue_load_sub("election/sextape.json");
 var twitter = scr_dialogue_load_sub("election/twitter.json");
+var election_day = scr_dialogue_load_sub("election_day/election_day.json");
 
-ds_list_merge(climatechange, golf, mexicanwall, randombonus, sextape, twitter);
+ds_list_merge(
+    climatechange, 
+    golf, 
+    mexicanwall, 
+    randombonus, 
+    sextape, 
+    twitter,
+    election_day
+);
 
 return climatechange;
