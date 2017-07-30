@@ -52,6 +52,8 @@ drawable_text = "";
 
 // Alarm 0 is the alarm that slowly adds text
 alarm[0] = 1;
+
+audio_play_sound(snd_writing, 10, true);
 </string>
           </argument>
         </arguments>
@@ -77,6 +79,7 @@ alarm[0] = 1;
             <string>
 if(string_length(drawable_text) == string_length(text))
 {
+    audio_stop_sound(snd_writing);
     exit;
 }
 

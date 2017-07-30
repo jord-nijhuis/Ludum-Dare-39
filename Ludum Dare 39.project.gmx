@@ -162,6 +162,7 @@
     <sound>sound\snd_popularity_up</sound>
     <sound>sound\snd_power_up</sound>
     <sound>sound\snd_power_down</sound>
+    <sound>sound\snd_writing</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="gui">
