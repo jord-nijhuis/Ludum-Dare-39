@@ -9,7 +9,7 @@ switch(_stage)
         return "Election day";
         
     case "president_elect":
-        return "President-elect";
+        return "Pres-elect";
         
     case "president":
         return "President";
