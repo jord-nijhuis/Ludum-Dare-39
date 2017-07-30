@@ -40,6 +40,10 @@ time = 2;
 // The text color
 color = c_black;
 
+// The text alignment
+halign = fa_center;
+valign = fa_middle;
+
 // The text font
 font = fnt_card;
 
@@ -102,7 +106,9 @@ alarm[0] = time;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_colour(color);
+            <string>draw_set_halign(halign);
+draw_set_valign(valign);
+draw_set_colour(color);
 draw_set_font(font);
 draw_text_ext(x, y, drawable_text, line_seperator, max_x)
 </string>

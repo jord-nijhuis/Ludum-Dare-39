@@ -21,7 +21,7 @@ for(var i=0;i<ds_list_size(options);i++) {
     }
     
     option.x = x;
-    option.y = y + 128 + offset;
+    option.y = y + 140 + offset;
 }
 
 if (y<-300) {

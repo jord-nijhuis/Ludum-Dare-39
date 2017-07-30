@@ -130,6 +130,9 @@
       <sprite>sprites\spr_gui_powermeter_background</sprite>
       <sprite>sprites\spr_gui_powermeter_foreground</sprite>
       <sprite>sprites\spr_gui_popularity</sprite>
+      <sprite>sprites\spr_guibar</sprite>
+      <sprite>sprites\spr_guibar_bot</sprite>
+      <sprite>sprites\spr_powerneedle</sprite>
     </sprites>
     <sprites name="control">
       <sprite>sprites\spr_initigame</sprite>
