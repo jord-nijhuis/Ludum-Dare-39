@@ -10,6 +10,8 @@ var term_end_day = ds_map_find_value(days, "term_end_day");;
 
 ds_map_destroy(days);
 
+return "president_elect";
+
 if (day < election_day)
 {
     return "election";

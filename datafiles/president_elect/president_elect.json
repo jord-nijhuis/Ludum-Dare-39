@@ -1,0 +1,99 @@
+[
+	{
+		"id": "REDECORATE",
+		"text": "You need to redecorate you office!",
+		"stage": "president_elect",
+		"choices": [
+			{
+				"text": "Let your wife do it, you only care about money anyway.",
+				"popularity": 5,
+				"power": -2
+			},
+			{
+				"text": "Decorate the office with the skulls of your enemies",
+				"power": 10,
+				"popularity": -5
+			},
+			{
+				"text": "Hire somebody to do it for you.",
+				"money": -500
+			}
+		]
+	},
+
+	{
+		"id": "WHITE_HOUSE_LOOKS",
+		"text": "You dislike the way the White House looks. Such an old building is no place for a sophisticated man like you.",
+		"stage": "president_elect",
+		"choices": [
+			{
+				"text": "I guess it has a lot of cultural value and stuff, lets keep it this way..."
+			},
+			{
+				"text": "Let's do some restoration! And while were at it,a pool or three.",
+				"money": -1000,
+				"power": 5,
+				"popularity": -5
+			},
+			{
+				"text": "Screw the White House, from now on I'm operating from the Trump Tower!",
+				"money": 1000,
+				"power": 5,
+				"popularity": -10,
+			}
+		]
+	},
+
+	{
+		"id": "OBAMA_SPIRIT",
+		"text": "While working, you suddenly feel on your nerves. It feels as if the spirit from Mr. Obamacare is still floating around in this room",
+		"stage": "president_elect",
+		"choices": [
+			{
+				"text": "Do nothing, my ego will kick him out."
+			},
+			{
+				"text": "Hire some guys who call themselves Ghost Busters",
+				"money": -200,
+				"next_events": [
+					{
+						"event": "OBAMA_SPIRIT_GHOST_BUSTTERS",
+						"weight": 1
+					}
+				]
+			}
+		]
+	},
+
+	{
+		"id": "OBAMA_SPIRIT_GHOST_BUSTTERS",
+		"stage": "special_event",
+		"text": "The Ghost Busters checked the whole building, but could not find anything. The decide to play some funky 80's tune to lighten to mood.",
+		"sound": "ghost_busters",
+		"choices": [
+			{
+				"text": "Human music, I like it!"
+			}
+		]
+	},
+
+	{
+		"id": "AFFAIR",
+		"text": "While you open the door of your office, you see one of the cleaning ladies sitting in your chair. What do you do?",
+		"stage": "president_elect",
+		"choices": [
+			{
+				"text": "Start an affair with her. What's the harm in that?",
+				"triggers": ["AFFAIR"]
+			},
+			{
+				"text": "Shout her out of your office and deport her to Mexico.",
+				"power": 2,
+			},
+			{
+				"text": "Politely explain that that is your spot, that is where you sit.",
+				"popularity": 2
+			}
+		]
+	}
+]

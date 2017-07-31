@@ -3,8 +3,8 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="13" name="datafiles">
-    <datafiles number="13" name="election">
+  <datafiles number="14" name="datafiles">
+    <datafiles number="14" name="election">
       <datafile>
         <name>twitter.json</name>
         <exists>-1</exists>
@@ -108,7 +108,7 @@
         <filename>start.json</filename>
       </datafile>
     </datafiles>
-    <datafiles number="13" name="multistage">
+    <datafiles number="14" name="multistage">
       <datafile>
         <name>mexicanwall.json</name>
         <exists>-1</exists>
@@ -127,7 +127,7 @@
         <filename>mexicanwall.json</filename>
       </datafile>
     </datafiles>
-    <datafiles number="13" name="election_day">
+    <datafiles number="14" name="election_day">
       <datafile>
         <name>election_day.json</name>
         <exists>-1</exists>
@@ -146,7 +146,7 @@
         <filename>election_day.json</filename>
       </datafile>
     </datafiles>
-    <datafiles number="13" name="president">
+    <datafiles number="14" name="president">
       <datafile>
         <name>terrorists.json</name>
         <exists>-1</exists>
@@ -182,6 +182,25 @@
         <filename>failures.json</filename>
       </datafile>
     </datafiles>
+    <datafiles number="14" name="president_elect">
+      <datafile>
+        <name>president_elect.json</name>
+        <exists>-1</exists>
+        <size>0</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>president_elect.json</filename>
+      </datafile>
+    </datafiles>
   </datafiles>
   <NewExtensions/>
   <sounds name="sound">
@@ -192,6 +211,7 @@
       <sound>sound\snd_love_china</sound>
       <sound>sound\snd_wall</sound>
       <sound>sound\snd_low_energy</sound>
+      <sound>sound\snd_ghost_busters</sound>
     </sounds>
     <sound>sound\snd_money</sound>
     <sound>sound\snd_popularity_down</sound>
@@ -318,6 +338,10 @@
       <script>scripts\scr_phrases_select_by_name.gml</script>
       <script>scripts\scr_phrases_select_all.gml</script>
     </scripts>
+    <scripts name="audio_manager">
+      <script>scripts\scr_audio_manager_queue_sound.gml</script>
+      <script>scripts\scr_audio_manager_is_emtpy.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_gui</font>
@@ -327,6 +351,7 @@
   <objects name="objects">
     <objects name="scr">
       <object>objects\obj_scr_draw_text</object>
+      <object>objects\obj_audio_manager</object>
     </objects>
     <object>objects\obj_initgame</object>
     <objects name="gui">

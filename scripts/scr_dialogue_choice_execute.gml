@@ -64,7 +64,7 @@ if(!is_undefined(unset_triggers))
 // Play sound
 if(!is_undefined(sound))
 {
-    audio_play_sound(scr_phrases_select_by_name(sound), 20, false);
+    scr_audio_manager_queue_sound(scr_phrases_select_by_name(sound));
 }
 
 scr_handle_custom_triggers(global.triggers);

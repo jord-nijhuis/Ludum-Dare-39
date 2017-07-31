@@ -32,6 +32,11 @@ ds_map_add(sounds, "terroristattack", create_array(
     snd_planecrash
 ));
 
+// Ghost Busters
+ds_map_add(sounds, "ghost_busters", create_array(
+    snd_ghost_busters
+));
+
 return sounds;
 
 
