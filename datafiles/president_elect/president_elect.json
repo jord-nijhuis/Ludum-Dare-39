@@ -30,7 +30,7 @@
 				"text": "I guess it has a lot of cultural value and stuff, lets keep it this way..."
 			},
 			{
-				"text": "Let's do some restoration! And while were at it,a pool or three.",
+				"text": "Let's do some restoration! And while were at it, a pool or three.",
 				"money": -1000,
 				"power": 5,
 				"popularity": -5
@@ -68,7 +68,7 @@
 	{
 		"id": "OBAMA_SPIRIT_GHOST_BUSTTERS",
 		"stage": "special_event",
-		"text": "The Ghost Busters checked the whole building, but could not find anything. The decide to play some funky 80's tune to lighten to mood.",
+		"text": "The Ghost Busters checked the whole building, but could not find anything. They decide to play some funky 80's tune to lighten to mood.",
 		"sound": "ghost_busters",
 		"choices": [
 			{

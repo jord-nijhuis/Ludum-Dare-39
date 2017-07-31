@@ -1,7 +1,7 @@
 [{
 
       "id": "RANDOMCHINAVISIT",
-      "text": "You decide to take a vacation to china! You visit the great wall and think of new ideas on how to keep immigrants from entering America.",
+      "text": "You decide to take a vacation to China! You visit the great wall and think of new ideas on how to keep immigrants from entering America.",
       "stage": "election",
       "sound": "china",
       "choices": [{
@@ -162,7 +162,7 @@
    {
       "id": "LOLITA_EXPRESS",
       "stage": "election",
-      "text": "Some Californian journalists wants to publish a photo of you entering the Lolita Express and now asks for a comment.",
+      "text": "Some Californian journalists wants to publish a photo of you entering the Lolita Express and is now asking for a comment.",
       "choices": [
          {
             "text": "Tell her that it's fake news.",

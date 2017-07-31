@@ -45,7 +45,7 @@
    },
    {  
       "id":"WALLFINANCE",
-      "text":"How are we going to pay for this wall?",
+      "text":"How are we going to pay for the wall?",
       "stage":"election",
       "sound": "wall",
       "requires_triggers":[  
@@ -59,7 +59,7 @@
             "popularity": 5
          },
          {  
-            "text":"The taxpayers will pay for this wall.",
+            "text":"The taxpayers will pay for the wall.",
             "money":-50000,
             "power":5,
             "popularity": -15

@@ -27,7 +27,7 @@
    },
    {  
       "id":"SEXTAPE_HAPPY",
-      "text":"The sextape is a big hit in CHINA. All profits go to your campaign.",
+      "text":"The sex tape is a big hit in CHINA. All profits go to your campaign.",
       "stage":"special_event",
       "sound": "china_positive",
       "choices":[  
@@ -44,7 +44,7 @@
       "stage":"special_event",
       "choices":[  
          {  
-            "text":"Worst. Sextape. Ever.",
+            "text":"Worst. Sex tape. Ever.",
             "power":-10,
             "popularity":-20
          }

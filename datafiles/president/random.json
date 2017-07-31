@@ -2,7 +2,7 @@
 	{
 		"id": "NOT_THAT_GREAT",
 		"stage": "president",
-		"text": "People start to notice that even though you have been president for a while, America is still not 'great again'.",
+		"text": "People start to notice that even though you have been president for a while, America is still not great again.",
 		"choices": [
 			{
 				"text": "I'm not a miracle worker! In fact, I am not even part of the working class.",
@@ -10,7 +10,7 @@
 			},
 
 			{
-				"text": "Give an speech on how you know many people who do think that America is great again.",
+				"text": "Give a speech on how you know many people who do think that America is great again.",
 				"popularity": 2
 			}
 		]
@@ -210,7 +210,7 @@
 	{
 		"id": "NET_NEUTRALITY",
 		"stage": "president",
-		"text": "A reporter ask you about your opinion on Net Neutrality.",
+		"text": "A reporter asks you about your opinion on net neutrality.",
 		"choices": [
 			{
 				"text": "I have no clue what you're talking about, but I am never neutral.",
@@ -314,7 +314,7 @@
 	{
 		"id": "INAUGURATION_SPEECH",
 		"stage": "president",
-		"text": "Somebody made fun of TV on the small crowd at your inauguration speech, again.",
+		"text": "Somebody made fun of the small crowd at your inauguration speech on TV, again.",
 		"choices": [
 			{
 				"text": "It's almost as if The Daily Show doesn't have anything better to do.",
@@ -381,7 +381,7 @@
 
 			{
 				"text": "Pay the money.",
-				"money": -100
+				"money": -1000
 			},
 
 			{
@@ -394,7 +394,7 @@
 	{
 		"id": "AFFAIR_LEAK_DEPORT",
 		"stage": "special_event",
-		"text": "You deported here. Like you always do. Good job.",
+		"text": "You deported her. Like you always do. Good job.",
 		"choices": [
 			{
 				"text": "I love myself.",

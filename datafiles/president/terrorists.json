@@ -32,6 +32,7 @@
       },{
          "text": "Spend money on preventing radicalism.",
          "power": -5,
+         "money": -1000,
          "popularity": 5
       }]
 }
