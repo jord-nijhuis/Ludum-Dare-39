@@ -1,45 +1,39 @@
-[
-    {  
+[{
 
-      "id":"GOLF_WIN",
-      "text":"You won!",
-      "stage":"special_event",
-      "choices":[  
-         {  
-            "text":"I love golf!",
-            "popularity": 10,
-            "power": 10,
-            "money": 10000,
-         }
-      ]
-    },
-    {  
+		"id": "GOLF_WIN",
+		"text": "You won!",
+		"stage": "special_event",
+		"choices": [{
+			"text": "I love golf!",
+			"popularity": 10,
+			"power": 10,
+			"money": 10000
+		}]
+	},
+	{
 
-      "id":"GOLF_LOSE",
-      "text":"You lost from Putin!",
-      "stage":"special_event",
-      "choices":[  
-         {  
-            "text":"Screw Russia.",
-            "popularity": -5,
-            "power": -10
-         }
-      ]
-    },
-    {  
+		"id": "GOLF_LOSE",
+		"text": "You lost from Putin!",
+		"stage": "special_event",
+		"choices": [{
+			"text": "Screw Russia.",
+			"popularity": -5,
+			"power": -10
+		}]
+	},
+	{
 
-      "id":"RANDOMGOLFPUTIN",
-      "text":"You get an invitation from your best friend Vladdy Putin! He asks if you want to go golfing!",
-      "stage":"election",
-      "choices":[  
-         {  
-            "text":"Let's go golfing!",
-            "change_room": "rm_golfing",
-         },
-         {  
-            "text":"Fuck that communist pig!",
-            "popularity":5,
-         }
-      ]
-   }
+		"id": "RANDOMGOLFPUTIN",
+		"text": "You get an invitation from your best friend Vladdy Putin! He asks if you want to go golfing!",
+		"stage": "election",
+		"choices": [{
+				"text": "Let's go golfing!",
+				"change_room": "rm_golfing",
+			},
+			{
+				"text": "Fuck that communist pig!",
+				"popularity": 5,
+			}
+		]
+	}
 ]

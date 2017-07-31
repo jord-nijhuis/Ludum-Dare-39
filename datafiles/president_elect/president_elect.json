@@ -39,7 +39,7 @@
 				"text": "Screw the White House, from now on I'm operating from the Trump Tower!",
 				"money": 1000,
 				"power": 5,
-				"popularity": -10,
+				"popularity": -10
 			}
 		]
 	},
@@ -88,7 +88,7 @@
 			},
 			{
 				"text": "Shout her out of your office and deport her to Mexico.",
-				"power": 2,
+				"power": 2
 			},
 			{
 				"text": "Politely explain that that is your spot, that is where you sit.",

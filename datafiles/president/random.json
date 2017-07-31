@@ -416,7 +416,7 @@
 			{
 				"text": "Let's kick her while she's down!",
 				"power": 5,
-				"popularity": -3,
+				"popularity": -3
 			}
 		]
 	},
@@ -426,7 +426,7 @@
 		"stage": "president",
 		"requires_triggers": ["FATHER_LOAN"],
 		"text": "Some reporter did a deep background check, and found out that you are filthy rich thanks to your father's loans.",
-		"choice": [
+		"choices": [
 			{
 				"text": "So?",
 				"popularity": -3,
@@ -436,7 +436,7 @@
 			{
 				"text": "Bribe him with your father's money.",
 				"power": 3,
-				"money": 3,
+				"money": 3
 			}
 		]
 	}

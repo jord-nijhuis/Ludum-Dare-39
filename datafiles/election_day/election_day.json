@@ -8,14 +8,14 @@
 				"triggers": ["ELECTION_DAY"],
 				"text": "With blackjack and hookers.",
 				"money": -100,
-				"days": 1,
+				"days": 1
 			},
 			{
 				"text": "Let's give a speech about my greatness.",
 				"triggers": ["ELECTION_DAY"],
 				"power": 10,
 				"popularity": 5,
-				"days": 1,
+				"days": 1
 			}
 		]
 	},
