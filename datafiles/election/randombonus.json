@@ -57,7 +57,7 @@
 
    {
       "id": "FATHER_LOAN",
-      "text": "Your father wants to give you a small loan of 100 000 USD.",
+      "text": "Your father wants to give you a small loan of 20 000 USD.",
       "stage": "election",
       "choices": [{
             "text": "I have my own money-printing factory now.",
@@ -68,7 +68,7 @@
          },
          {
             "text": "Take it. Money is money after all.",
-            "money": 100000,
+            "money": 20000,
             "triggers": [
                "FATHER_LOAN"
             ]         

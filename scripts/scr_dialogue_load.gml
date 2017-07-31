@@ -20,6 +20,9 @@ var terrorists = scr_dialogue_load_sub("president/terrorists.json");
 var failures = scr_dialogue_load_sub("president/failures.json");
 var _random = scr_dialogue_load_sub("president/random.json");
 
+// Retired
+var retired = scr_dialogue_load_sub("retired/retired.json");
+
 ds_list_merge(
     start,
     climatechange, 
@@ -32,7 +35,8 @@ ds_list_merge(
     president_elect,
     terrorists,
     failures,
-    _random
+    _random,
+    retired
 );
 
 return start;
