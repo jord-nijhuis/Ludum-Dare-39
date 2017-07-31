@@ -58,7 +58,7 @@ if(!is_undefined(triggers))
 // Day
 if(is_undefined(days))
 {
-    if (scr_get_stage(days) == "president")
+    if (scr_get_stage(global.day) == "president")
     {
         days = round(random_range(85, 95));
     }
