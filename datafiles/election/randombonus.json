@@ -103,6 +103,7 @@
             "text": "You're fired.",
             "next_events": [{
                "event": "SAYING_STUPID_FIRED",
+               "days": 0,
                "weight": 1
             }]
          }

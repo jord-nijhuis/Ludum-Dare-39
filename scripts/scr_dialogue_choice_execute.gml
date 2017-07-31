@@ -7,7 +7,7 @@ var choice = argument0;
 var money = ds_map_find_value(choice, "money");
 var _power = ds_map_find_value(choice, "power");
 var popularity = ds_map_find_value(choice, "popularity");
-var day = ds_map_find_value(choice, "day");
+var days = ds_map_find_value(choice, "days");
 var triggers = ds_map_find_value(choice, "triggers");
 var unset_triggers = ds_map_find_value(choice, "unset_triggers");
 var sound = ds_map_find_value(choice, "sound");
@@ -34,20 +34,20 @@ if(!is_undefined(popularity))
     scr_popularity_add(popularity);
 }
 
-// Day
-if(is_undefined(day))
-{
-    day = round(random_range(35, 45));
-}
-
-global.day = scr_add_days(global.day, day);
-
 // Triggers
 if(!is_undefined(triggers))
 {
     ds_list_merge(global.triggers, triggers)
     ds_list_unique(global.triggers);
 }
+
+// Day
+if(is_undefined(days))
+{
+    days = round(random_range(35, 45));
+}
+
+global.day = scr_add_days(global.day, days);
 
 // Change room
 if(!is_undefined(change_room))
