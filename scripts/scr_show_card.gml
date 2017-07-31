@@ -14,7 +14,7 @@ newCard.textObject.font = fnt_card;
 var sound = ds_map_find_value(argument0, "sound");
 if(!is_undefined(sound))
 {
-    audio_play_sound(scr_phrases_select_by_name(sound), 10, false);
+    scr_audio_manager_queue_sound(scr_phrases_select_by_name(sound));
 }
 
 var choices = ds_map_find_value(argument0, "choices");

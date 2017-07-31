@@ -3,7 +3,7 @@
 
       "id": "TERRORISTATTACK",
       "text": "You're just about to eat an ice cream cone with two scoops of ice cream, when suddenly...",
-      "stage": "election",
+      "stage": "president",
       "choices": [{
          "sound": "terroristattack",
          "text": "What's that noise?",

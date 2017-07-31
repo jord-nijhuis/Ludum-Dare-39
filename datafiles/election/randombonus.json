@@ -165,10 +165,12 @@
          {
             "text": "Tell her that it's fake news.",
             "power": 2,
+            "popularity": -5
          },
          {
             "text": "Tell her that you did not fly with that airplane.",
-            "popularity": 10,
+            "popularity": -5,
+            "power": -2,
          },
          {
             "text": "Bribe her.",
