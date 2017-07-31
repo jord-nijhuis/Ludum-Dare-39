@@ -356,6 +356,7 @@
     <object>objects\obj_initgame</object>
     <objects name="gui">
       <object>objects\obj_gui</object>
+      <object>objects\obj_statchange</object>
     </objects>
     <objects name="cards">
       <object>objects\obj_cardmanager</object>

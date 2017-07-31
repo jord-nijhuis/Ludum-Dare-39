@@ -16,22 +16,36 @@ var change_room = ds_map_find_value(choice, "change_room");
 // Add the choice we are executing to the used choices
 ds_list_add(global.used_choices, choice);
 
+var timer = 0;
+
 // Money
 if(!is_undefined(money))
 {
-    scr_money_add(money);
+    m = instance_create(200,200,obj_statchange);
+    m.timer = timer;
+    m.type = 0;
+    m.amount = money;
+    timer += 60;
 }
 
 // Power
 if(!is_undefined(_power))
 {
-    scr_power_add(_power);
+    m = instance_create(room_width/2,200,obj_statchange);
+    m.timer = timer;
+    timer += 60;
+    m.type = 1;
+    m.amount = _power;
 }
 
 // Popularity
 if(!is_undefined(popularity))
 {
-    scr_popularity_add(popularity);
+    m = instance_create(room_width-200,200,obj_statchange);
+    m.timer = timer;
+    timer += 60;
+    m.type = 2;
+    m.amount = popularity;
 }
 
 // Day
