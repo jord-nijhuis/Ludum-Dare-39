@@ -1,4 +1,4 @@
-
+return undefined;
 var dialogue = argument0;
 var stage = argument1;
 

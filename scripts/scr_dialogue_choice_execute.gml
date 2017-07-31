@@ -90,4 +90,3 @@ if(!is_undefined(sound))
 }
 
 scr_handle_custom_triggers(global.triggers);
-scr_handle_custom_stages(global.dialogue, scr_get_stage(global.day));

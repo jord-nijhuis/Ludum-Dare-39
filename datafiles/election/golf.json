@@ -16,11 +16,11 @@
     {  
 
       "id":"GOLF_LOSE",
-      "text":"You lost from putin!",
+      "text":"You lost from Putin!",
       "stage":"special_event",
       "choices":[  
          {  
-            "text":"Screw russia.",
+            "text":"Screw Russia.",
             "popularity": -5,
             "power": -10
          }
@@ -34,7 +34,6 @@
       "choices":[  
          {  
             "text":"Let's go golfing!",
-            "trigger": "GOLF",
             "change_room": "rm_golfing",
          },
          {  

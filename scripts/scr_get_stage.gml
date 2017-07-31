@@ -1,5 +1,4 @@
 // This function takes the current day in game, and returns the stage that we are currently in
-
 var day = argument0;
 
 var days = scr_get_important_days();

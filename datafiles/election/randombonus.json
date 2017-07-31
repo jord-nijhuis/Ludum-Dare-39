@@ -57,7 +57,7 @@
 
    {
       "id": "FATHER_LOAN",
-      "text": "Your father wants to give you a small loan of a million.",
+      "text": "Your father wants to give you a small loan of 100 000 USD.",
       "stage": "election",
       "choices": [{
             "text": "I have my own money-printing factory now.",
@@ -68,10 +68,11 @@
          },
          {
             "text": "Take it. Money is money after all.",
-            "money": 1000000,
+            "money": 100000,
             "triggers": [
                "FATHER_LOAN"
-            ]         }
+            ]         
+         }
       ]
    },
 
@@ -96,7 +97,7 @@
             "popularity": 5
          },
          {
-            "text": "The moonlanding was a hoax.",
+            "text": "The moon landing was a hoax.",
             "popularity": -5
          },
          {
@@ -139,10 +140,10 @@
    {
       "id": "TOWER_BIGGER",
       "stage": "election",
-      "text": "Some other filthy rich human being is building a tower next to the Tump Tover that is bigger than yours!",
+      "text": "Some other filthy rich human being is building a tower next to the Trump Tower that is bigger than yours!",
       "choices": [
          {
-            "text": "Hire a good lawyer that will find a way to undo his bulding warrant.",
+            "text": "Hire a good lawyer that will find a way to undo his building warrant.",
             "power": 10,
             "money": -5000
          },

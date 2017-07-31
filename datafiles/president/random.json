@@ -10,7 +10,7 @@
 			},
 
 			{
-				"text": "Give an encouraging speech to the public on how you know many people who do think that America is great again.",
+				"text": "Give an speech on how you know many people who do think that America is great again.",
 				"popularity": 2
 			}
 		]
@@ -22,10 +22,11 @@
 		"text": "Your advisor mentions that bringing Apple's production back is a good way to create jobs. How are you going to convince Tim Cook?",
 		"choices": [
 			{
-				"text": "Who's Tim Cook? Isn't Steve Jobs running that place?"
+				"text": "Who's Tim Cook? Isn't Steve Jobs running that place?",
+				"power": -3
 			},
 			{
-				"text": "Plant some money, and hope a factory will grow there.",
+				"text": "Plant some money in a field, and hope a factory will grow there.",
 				"power": 3,
 				"money": -2000
 			},
@@ -43,7 +44,8 @@
 		"text": "It's time for you daily Twitter-moment. What are you going to tweet about this time?",
 		"choices": [
 			{
-				"text": "The many great things you have acomplished in the last five minutes.",
+				"text": "The many great things you have accomplished in the last five minutes.",
+				"popularity": 3,
 				"next_events": [{
                		"event": "COVFEFE",
                		"weight": 1
@@ -51,7 +53,9 @@
 			},
 
 			{
-				"text": "Criticize a random country that probably does not even exist, but you've seen it on Facebook",
+				"text": "Criticize a random country that probably does not even exist, but you've seen on Facebook",
+				"popularity": -2,
+				"power": -2,
 				"next_events": [{
                		"event": "COVFEFE",
                		"weight": 1
@@ -69,6 +73,370 @@
 				"text": "Dammit. I should stop reading 50 Shades of Grey.",
 				"popularity": 5,
 				"power": -5
+			}
+		]
+	},
+
+	{
+		"id": "LOOKALIKE",
+		"stage": "president",
+		"text": "While looking at a picture of Kim-Jong Un, you suddenly see the resemblance between you two.",
+		"choices": [
+			{
+				"text": "I hate people copying another! Unless, of course, you're copying me, because that gives you individuality.",
+				"power": -2,
+				"popularity": 2
+			},
+			{
+				"text": "I do not know who that fat Dwarf is, but my nukes will.",
+				"power": 20,
+				"money": -10000
+			}
+		]
+	},
+
+	{
+		"id": "CARROT",
+		"stage": "president",
+		"text": "While walking from your tennis court to the helicopter an old lady gives you a carrot.",
+		"choices": [
+			{
+				"text": "What is that savage doing here?",
+				"power": 3
+			},
+			{
+				"text": "Eat the carrot.",
+				"next_events": [
+					{
+						"event": "CARROT_EAT",
+						"weight": 1
+					}
+				]
+			}
+		]
+	},
+
+	{
+		"id": "CARROT_EAT",
+		"stage": "special_event",
+		"text": "You feel sleepy. After a small nap, you look in the mirror and see that your skin has turned orange!",
+		"choices": [
+			{
+				"text": "Lookin' good.",
+				"popularity": 3,
+				"power": -5
+			}
+		]
+	},
+
+	{
+		"id": "FEMINIST",
+		"stage": "president",
+		"text": "A feminist is complaining about equal rights again.",
+		"choices": [
+			{
+				"text": "Offer to deport both her and her husband.",
+				"popularity": -5,
+				"power": 3
+			},
+
+			{
+				"text": "Tell her that tumblr.com exists for a reason.",
+				"popularity": 1,
+				"power": 1
+			},
+
+			{
+				"text": "Ignore her."
+			}
+		]
+	},
+
+	{
+		"id": "FIRE_FBI",
+		"stage": "president",
+		"text": "The FBI is investigating your relationship with your best friend Vladdy.",
+		"choices": [
+			{
+				"text": "Fire the FBI director, nobody touches my Vladdy.",
+				"power": 3,
+				"popularity": -5
+			},
+
+			{
+				"text": "Let them be. The power of friendship defeats all.",
+				"power": -5
+			}
+		]
+	},
+
+	{
+		"id": "DESPACITO",
+		"stage": "president",
+		"text": "While signing some very important papers, Despacito is on the radio, again.",
+		"choices": [
+			{
+				"text": "Like a reasonable human being, turn off the radio.",
+				"power": 1
+			},
+
+			{
+				"text": "File an executive order that states that Despacito is banned from now on.",
+				"power": 5,
+				"money": -1000,
+				"popularity": -5
+			}
+		]
+	},
+
+	{
+		"id": "RUSSIA_THREAT",
+		"stage": "president",
+		"text": "Russia is becoming a bigger and bigger threat to national security!",
+		"choices": [
+			{
+				"text": "Don't worry! I'm on good terms with my boy Putin!",
+				"power": -20
+			},
+
+			{
+				"text": "We need to increase military spending.",
+				"money": -20000,
+				"power": 10
+			}
+		]
+	},
+
+	{
+		"id": "NET_NEUTRALITY",
+		"stage": "president",
+		"text": "A reporter ask you about your opinion on Net Neutrality.",
+		"choices": [
+			{
+				"text": "I have no clue what you're talking about, but I am never neutral.",
+				"popularity": -10,
+				"power": 5,
+				"money": 2000
+			},
+
+			{
+				"text": "Very important! I keep saying that it's very import, because it is.",
+				"popularity": 10
+			}
+		]
+	},
+
+	{
+		"id": "UNREASONABLE_EXECUTIVE_ORDER",
+		"stage": "president",
+		"text": "It's time for a unreasonable executive order!",
+		"choices": [
+			{
+				"text": "Ban Kinder Eggs",
+				"next_events": [{
+					"event": "UNREASONABLE_EXECUTIVE_ORDER_ALREADY_DONE",
+					"weight": 1
+				}]
+			},
+
+			{
+				"text": "Force every city to have a statue of me!",
+				"power": 10,
+				"money": -5000
+			}
+		]
+	},
+
+	{
+		"id": "UNREASONABLE_EXECUTIVE_ORDER_ALREADY_DONE",
+		"stage": "special_event",
+		"text": "You cannot ban something that is already banned, you silly man.",
+		"choices": [
+			{
+				"text": "Right."
+			}
+		]
+	},
+
+	{
+		"id": "MERKEL",
+		"stage": "president",
+		"text": "You finally have your first meeting with Angela Merkel, exciting!",
+		"choices": [
+			{
+				"text": "Show how strong Daddy Donald is, and pull her in while shaking hands.",
+				"power": 5,
+				"popularity": -2
+			},
+
+			{
+				"text": "Make some kind of trade deal, which you think earns you money in exchange for some things.",
+				"power": -5,
+				"money": 2750
+			}
+		]
+	},
+
+	{
+		"id": "LUBACH",
+		"stage": "president",
+		"text": "Some stupid Dutch person made a sarcastic video about how great The Netherlands is while imitating your voice.",
+		"choices": [
+			{
+				"text": "Make a video about how great America is while imitating his voice",
+				"popularity": 5,
+				"money": -500
+			},
+			{
+				"text": "Let it go, it probably won't go viral or anything...",
+				"next_events": [
+					{
+						"event": "LUBACH_VIRAL",
+						"weight": 1
+					}
+				]
+			}
+		]
+	},
+
+	{
+		"id": "LUBACH_VIRAL",
+		"stage": "special_event",
+		"text": "It went viral.",
+		"choices": [
+			{
+				"text": "You've got to be kidding me.",
+				"popularity": -5
+			}
+		]
+	},
+
+	{
+		"id": "INAUGURATION_SPEECH",
+		"stage": "president",
+		"text": "Somebody made fun of TV on the small crowd at your inauguration speech, again.",
+		"choices": [
+			{
+				"text": "It's almost as if The Daily Show doesn't have anything better to do.",
+				"popularity": -2,
+				"power": -2
+			}
+		]
+	},
+
+	{
+		"id": "CHINESE_GUY",
+		"stage": "president",
+		"text": "Mr. President, Li Keqiang is waiting in the lobby.",
+		"choices": [
+			{
+				"text": "Ah, finally, the Chinese delivery guy!",
+				"next_events": [{"event": "CHINESE_GUY_WHO", "weight": 1}],
+				"power": -5
+			},
+
+			{
+				"text": "Let him in, we need to make some trade deals.",
+				"money": 1000,
+				"power": 3,
+				"popularity": -5
+			},
+
+			{
+				"text": "Not now, I'm watching The Great British Bake Off.",
+				"popularity": -3,
+				"power": -5
+			}
+		]
+	},
+
+	{
+		"id": "CHINESE_GUY_WHO",
+		"stage": "special_event",
+		"text": "Not quite Mr President, he is the Premier of China.",
+		"choices": [
+			{
+				"text": "Sounds important, send him in.",
+				"power": 3
+			},
+
+			{
+				"text": "Still don't know him, deport him please.",
+				"popularity": -5
+			}
+		]
+	},
+
+	{
+		"id": "AFFAIR_LEAK",
+		"stage": "president",
+		"requires_triggers": ["AFFAIR"],
+		"text": "That stupid whore that you had an affair with threatens to go public with it unless you give her money.",
+		"choices": [
+			{
+				"text": "You know what you have to do.",
+				"days": 0,
+				"next_events": [{"event": "AFFAIR_LEAK_DEPORT", "weight": 1}]
+			},
+
+			{
+				"text": "Pay the money.",
+				"money": -100
+			},
+
+			{
+				"text": "Which one?",
+				"popularity": -10
+			}
+		]
+	},
+
+	{
+		"id": "AFFAIR_LEAK_DEPORT",
+		"stage": "special_event",
+		"text": "You deported here. Like you always do. Good job.",
+		"choices": [
+			{
+				"text": "I love myself.",
+				"power": 3
+			}
+		]
+	},
+
+	{
+		"id": "HILLARY_INVESTIGATION_RESULT",
+		"stage": "president",
+		"requires_triggers": ["HILLARY_INVESTIGATION"],
+		"text": "The investigation into Hillary Clinton finally paid off!",
+		"choices": [
+			{
+				"text": "It's a bit late for that now is it?"
+			},
+
+			{
+				"text": "Let's kick her while she's down!",
+				"power": 5,
+				"popularity": -3,
+			}
+		]
+	},
+
+	{
+		"id": "FATHER_LOAN_REPORTER",
+		"stage": "president",
+		"requires_triggers": ["FATHER_LOAN"],
+		"text": "Some reporter did a deep background check, and found out that you are filthy rich thanks to your father's loans.",
+		"choice": [
+			{
+				"text": "So?",
+				"popularity": -3,
+				"power": -3
+			},
+
+			{
+				"text": "Bribe him with your father's money.",
+				"power": 3,
+				"money": 3,
 			}
 		]
 	}

@@ -1,6 +1,13 @@
 // Selects a single dialogue option that matches all the criteria
 // Note that this uses the global variables that are declared in obj_initgame
 
+var required_dialogue = scr_dialogue_select_required();
+
+if(!is_undefined(required_dialogue))
+{
+    return required_dialogue;
+}
+
 if (global.overwrite_event != undefined) {
     var ret = global.overwrite_event;
     global.overwrite_event = undefined;

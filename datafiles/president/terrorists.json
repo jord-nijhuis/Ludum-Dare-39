@@ -20,14 +20,19 @@
       "id": "AFTER_TERRORISTATTACK",
       "text": "Oh no, you were so startled by the explosion that you dropped your ice cream! Those darn terrorists!",
       "stage": "special_event",
-      "trigger": "TERRORISTS_ATTACKED",
       "choices": 
       [{
-         "text": "Ban all muslims from travelling to the US!",
+         "text": "Ban all Muslims from traveling to the US!",
+         "power": 5,
+         "popularity": -5,
       },{
          "text": "Increase surveillance!",
+         "power": 5,
+         "money": -2500 
       },{
          "text": "Spend money on preventing radicalism.",
+         "power": -5,
+         "popularity": 5
       }]
 }
 ]

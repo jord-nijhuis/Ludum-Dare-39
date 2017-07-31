@@ -23,7 +23,7 @@
 	{
 		"id": "election_day_lost",
 		"stage": "custom_event",
-		"text": "Sadly the election was rigged by de Democrats, and now you've lost!",
+		"text": "Sadly the election was rigged by the Democrats, and now you've lost!",
 		"choices": [
 			{
 				"text": "Play again.",

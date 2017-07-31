@@ -51,13 +51,7 @@
       "requires_triggers":[  
          "BUILD_WALL"
       ],
-      "choices":[  
-         {  
-            "text":"We will get support from Russia",
-            "money":50000,
-            "power":-20,
-            "popularity": -5
-         },
+      "choices":[ 
          {  
             "text":"Mexico will pay for the wall, of course!",
             "money":25000,
