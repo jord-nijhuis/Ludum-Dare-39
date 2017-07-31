@@ -20,5 +20,27 @@
             ]
          }
       ]
+   },
+
+   {
+   		"id": "CLIMATECHANGE_EFFECT",
+   		"stage": "president",
+   		"requires_triggers": ["DROUGHT"],
+   		"text": "Thanks to all the recently opened coal mines, climate change has worsened. We are currently in a severe Drought!",
+   		"choices": [
+   			{
+   				"text": "This is time for my company, I mean, my son's company, to start selling water!",
+   				"power": 5,
+   				"money": 1000,
+   				"popularity": -5
+   			},
+
+   			{
+   				"text": "We should start handing out free water bottles.",
+   				"power": -5,
+   				"money": -5000,
+   				"popularity": 10,
+   			}
+   		]
    }
 ]

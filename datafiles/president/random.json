@@ -1,0 +1,75 @@
+[
+	{
+		"id": "NOT_THAT_GREAT",
+		"stage": "president",
+		"text": "People start to notice that even though you have been president for a while, America is still not 'great again'.",
+		"choices": [
+			{
+				"text": "I'm not a miracle worker! In fact, I am not even part of the working class.",
+				"power": 5
+			},
+
+			{
+				"text": "Give an encouraging speech to the public on how you know many people who do think that America is great again.",
+				"popularity": 2
+			}
+		]
+	},
+
+	{
+		"id": "APPLE_BACK",
+		"stage": "president",
+		"text": "Your advisor mentions that bringing Apple's production back is a good way to create jobs. How are you going to convince Tim Cook?",
+		"choices": [
+			{
+				"text": "Who's Tim Cook? Isn't Steve Jobs running that place?"
+			},
+			{
+				"text": "Plant some money, and hope a factory will grow there.",
+				"power": 3,
+				"money": -2000
+			},
+			{
+				"text": "Give Jim Took a seat on some advisory board.",
+				"power": -7,
+				"money": 10000
+			}
+		]
+	},
+
+	{
+		"id": "TWITTER_TIME",
+		"stage": "president",
+		"text": "It's time for you daily Twitter-moment. What are you going to tweet about this time?",
+		"choices": [
+			{
+				"text": "The many great things you have acomplished in the last five minutes.",
+				"next_events": [{
+               		"event": "COVFEFE",
+               		"weight": 1
+            	}]
+			},
+
+			{
+				"text": "Critisize a random country that probably does not even exist, but you've seen it on Facebook",
+				"next_events": [{
+               		"event": "COVFEFE",
+               		"weight": 1
+            	}]
+			}
+		]
+	},
+
+	{
+		"id": "COVFEFE",
+		"stage": "special_event",
+		"text": "You've made a mental typo and accidentally added your BDSM safeword 'covfefe' to your tweet.",
+		"choices": [
+			{
+				"text": "Dammit. I should stop reading 50 Shades of Grey.",
+				"popularity": 5,
+				"power": -5
+			}
+		]
+	}
+]

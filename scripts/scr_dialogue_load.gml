@@ -2,7 +2,7 @@
 
 // Election
 var start = scr_dialogue_load_sub("election/start.json");
-var climatechange = scr_dialogue_load_sub("election/climatechange.json");
+var climatechange = scr_dialogue_load_sub("multistage/climatechange.json");
 var golf = scr_dialogue_load_sub("election/golf.json");
 var mexicanwall = scr_dialogue_load_sub("multistage/mexicanwall.json");
 var randombonus = scr_dialogue_load_sub("election/randombonus.json");
@@ -18,6 +18,7 @@ var president_elect = scr_dialogue_load_sub("president_elect/president_elect.jso
 // President
 var terrorists = scr_dialogue_load_sub("president/terrorists.json");
 var failures = scr_dialogue_load_sub("president/failures.json");
+var _random = scr_dialogue_load_sub("president/random.json");
 
 ds_list_merge(
     start,
@@ -30,7 +31,8 @@ ds_list_merge(
     election_day,
     president_elect,
     terrorists,
-    failures
+    failures,
+    _random
 );
 
 return start;
