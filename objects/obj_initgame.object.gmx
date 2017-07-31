@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>if(!debug_mode)
 {
-    randomize();
+    random_set_seed(current_time);
 }else{
     random_set_seed("seed");
 }

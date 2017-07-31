@@ -18,7 +18,7 @@
 {
 
       "id": "AFTER_TERRORISTATTACK",
-      "text": "Oh no, you were so startled by the explosion you dropped your ice cream! Those darn terrorists!",
+      "text": "Oh no, you were so startled by the explosion that you dropped your ice cream! Those darn terrorists!",
       "stage": "special_event",
       "trigger": "TERRORISTS_ATTACKED",
       "choices": 
