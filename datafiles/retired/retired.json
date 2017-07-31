@@ -1,0 +1,18 @@
+[
+	{
+		"id": "RETIRED",
+		"stage": "retired",
+		"text": "You made it. I do not know how, I do not know why. But you made it. You still have money, you still have power, and you've lead your people in a great way. Congratulations, you've finished your term!",
+		"choices": [
+			{
+				"text": "Play again.",
+				"triggers": ["RESTART"]
+			},
+
+			{
+				"text": "Quit.",
+				"triggers": ["QUIT"]
+			}
+		]
+	}
+]
